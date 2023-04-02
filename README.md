@@ -35,17 +35,20 @@ https://railway.app/new/template?template=
 
 </details>
 
-<!-- Start via Heroku -->
-<b><details><summary>Heroku app a deployna</summary></b>
+## HEROKU BUILDPACK
 
-* I WhatsApp link device a tangin scan tur [Hmet rawh](https://replit.com/@HBMods/HBWABot2?v=1?outputonly=1&lite=1#index.js)
-* He Repo hi fork la [Hmet rawh](https://github.com/Herbert40/HBWABot3/fork)
-* Chuan he tah hian deploy link [Hmet rawh](https://dashboard.heroku.com/new?template=https://Herbert40/HBWABot3)
-* Deploy chhung hi minute 5-10 ani thin a lo nghak zel dawn nia 
-* I deploy zo hunah logs kha check la 
+ ##
 
-<br>
-</details>
+```
+
+> heroku/nodejs
+
+> https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest
+
+> https://github.com/clhuang/heroku-buildpack-webp-binaries.git
+
+```
+
 
 
 <a href="https://github.com/Herbert40"><img title="Author" src="https://img.shields.io/badge/Author-HBMods-blue.svg?color=FFA161FF&style=for-the-badge&logo=github" /></a>  

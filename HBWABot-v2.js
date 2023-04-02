@@ -1526,7 +1526,7 @@ case 'tomp4': case 'tovideo': {
                 })
                 }
                 break
-case 'video': case 'yts': case 'youtube'{ 
+case 'video': case 'yts': case 'youtube': { 
 if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp status`)
             let ytsvideo = require("youtube-yts")
             let videosearch = await ytsvideo(text)

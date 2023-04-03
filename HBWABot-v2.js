@@ -1588,8 +1588,8 @@ ${themeemoji} Url : ${anulay.url}`,
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-case 'playmp3': case 'ytmp3': case 'ytaudio'//credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-if (!text) throw `\n*Entir nan* : ${prefix + command} anime whatsapp status`
+case 'playmp3': //Herbert
+if (!text) throw `\n*Entir nan* : ${prefix + command} K Hminga ka hringnun dairy`
 const xeonplaymp3 = require('./lib/ytdl2')
 let yts = require("youtube-yts")
         let search = await yts(text)
@@ -1634,6 +1634,13 @@ await XeonBotInc.sendMessage(m.chat,{
 
     },
 },{quoted:m})
+break 
+case 'ytmp3': case 'ytaudio': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
+const xeonaudp3 = require('./lib/ytdl2')
+if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Youtube video link rawn dah rawh\n\n*Entir nan*: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`
+const audio=await xeonaudp3.mp3(text)
+await XeonBotInc.sendMessage(m.chat, { audio: XeonBotInc_dev, mimetype: 'audio/mp4', ptt: false }, { quoted: m })
+await fs.unlinkSync(audio.path)
 break
 	    case 'logo': {
 	    if (!text) return reply(`\n*Entir nan :* ${prefix + command} HBMods`)

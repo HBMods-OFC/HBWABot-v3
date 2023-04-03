@@ -155,7 +155,7 @@ if (cek == null) return null
 	    //Fake
 	    const ftroli ={key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "status@broadcast"}, "message": {orderMessage: {itemCount: 2022,status: 200, thumbnail: thumb, surface: 200, message: botname, orderTitle: ownername, sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
 		const fdoc = {key : {participant : '0@s.whatsapp.net', ...(m.chat ? { remoteJid: `status@broadcast` } : {}) },message: {documentMessage: {title: botname,jpegThumbnail: thumb}}}
-		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=mp3","seconds":359996400,"ptt": "true"}} } 
+		const fvn = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: { "audioMessage": {"mimetype":"audio/ogg; codecs=mp3","seconds":359996400,"ptt": "false"}} } 
 		const fgif = {key: {participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {})},message: {"videoMessage": { "title":botname, "h": wm,'seconds': '359996400', 'gifPlayback': 'true', 'caption': ownername, 'jpegThumbnail': thumb}}}
 		const fgclink = {key: {participant: "0@s.whatsapp.net","remoteJid": "0@s.whatsapp.net"},"message": {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "m","groupName": wm, "caption": `${pushname}`, 'jpegThumbnail': thumb}}}
 		const fvideo = {key: { fromMe: false,participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: "status@broadcast" } : {}) },message: { "videoMessage": { "title":botname, "h": wm,'seconds': '359996400', 'caption': `${pushname}`, 'jpegThumbnail': thumb}}}
@@ -690,37 +690,7 @@ XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.se
 } else {
 }
 
-        //auto reply by xeon
-  if (Autoreply)
-        for (let anji of xeonysticker){
-				if (budy === anji){
-					result = fs.readFileSync(`./HBMedia/sticker/${anji}.webp`)
-					XeonBotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
-					}
-			}
-			  if (Autoreply)
-			for (let anju of xeonyaudio){
-				if (budy === anju){
-					result = fs.readFileSync(`./HBMedia/audio/${anju}.mp3`)
-					XeonBotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
-					}
-			}
-			  if (Autoreply)
-			for (let anjh of xeonyimage){
-				if (budy === anjh){
-					result = fs.readFileSync(`./HBMedia/image/${anjh}.jpg`)
-					XeonBotInc.sendMessage(m.chat, { image: result }, { quoted: m })
-					}
-			}
-			  if (Autoreply) 
-					for (let anjh of xeonyvideo){
-				if (budy === anjh){
-					result = fs.readFileSync(`./HBMedia/video/${anjh}.mp4`)
-					XeonBotInc.sendMessage(m.chat, { video: result }, { quoted: m })
-					}
-				  }
-
-      // Mute Chat
+        // Mute Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
       }
@@ -1618,7 +1588,7 @@ ${themeemoji} Url : ${anulay.url}`,
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break
-case 'playmp3': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
+case 'playmp3': case 'ytmp3': case 'ytaudio'//credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
 if (!text) throw `\n*Entir nan* : ${prefix + command} anime whatsapp status`
 const xeonplaymp3 = require('./lib/ytdl2')
 let yts = require("youtube-yts")
@@ -1628,7 +1598,7 @@ const pl= await xeonplaymp3.mp3(anup3k.url)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(pl.path),
     fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mp4', ptt: true,
+    mimetype: 'audio/mp4', ptt: false,
     contextInfo:{
         externalAdReply:{
             title:anup3k.title,
@@ -1664,13 +1634,6 @@ await XeonBotInc.sendMessage(m.chat,{
 
     },
 },{quoted:m})
-break
-case 'ytmp3': case 'ytaudio': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-const xeonaudp3 = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Youtube video link rawn dah rawh\n\n*Entir nan*: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`
-const audio=await xeonaudp3.mp3(text)
-await XeonBotInc.sendMessage(m.chat, { audio: XeonBotInc_dev, mimetype: 'audio/mp4', ptt: true }, { quoted: m })
-await fs.unlinkSync(audio.path)
 break
 	    case 'logo': {
 	    if (!text) return reply(`\n*Entir nan :* ${prefix + command} HBMods`)

@@ -1527,7 +1527,7 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
             })
             }
         break 
-        case 'yts': case 'ytsearch': case 'youtube': const _0x244632=_0x2493;(function(_0x42e7e3,_0x26c668){const _0x3abfea=_0x2493,_0x4da3ee=_0x42e7e3();while(!![]){try{const _0xec78a2=-parseInt(_0x3abfea(0x17b))/0x1+-parseInt(_0x3abfea(0x180))/0x2*(-parseInt(_0x3abfea(0x17f))/0x3)+-parseInt(_0x3abfea(0x18b))/0x4*(-parseInt(_0x3abfea(0x165))/0x5)+parseInt(_0x3abfea(0x173))/0x6+-parseInt(_0x3abfea(0x171))/0x7+parseInt(_0x3abfea(0x166))/0x8*(-parseInt(_0x3abfea(0x16f))/0x9)+parseInt(_0x3abfea(0x17d))/0xa*(-parseInt(_0x3abfea(0x178))/0xb);if(_0xec78a2===_0x26c668)break;else _0x4da3ee['push'](_0x4da3ee['shift']());}catch(_0x4ab77b){_0x4da3ee['push'](_0x4da3ee['shift']());}}}(_0x56cc,0x7bb74));function _0x56cc(){const _0x124eb9=['description','36Wlgwfz','122788qdRqlm','\x0a*UPLOAD:*\x20','timestamp','\x20I\x20thil\x20zawn\x20title\x20chhu\x20rawh*','ytmp4\x20','yt-search','▊▊▊YOUTUBE\x20SEARCH▊▊▊','result:\x20url\x20','\x0a*LINK:*\x20','\x0a*DURATION*\x20','ban','4436uTnxYb','*Entirnan\x20:\x20','mimetype:\x20video/mp4\x20','title','push','3850jVGKsb','8OlfmOa','linkok\x20','sendMessage','VIDEO\x20MP4⬤:','mimetype:\x20audio/mp3\x20','url','\x0a*CHANNEL:*\x20','ytmp3\x20','ago','3680244YcUhko','author','961709ryZPhz','chat','553926TdzmkP','HLA\x20MP3⬤:','all','\x20*\n\n*A\x20chhunga\x20hla\x20leh\x20video\x20te\x20i\x20i\x20thlang\x20thei\x20ang*\n\n','I\x20DUH\x20THLANG\x20RAWH','5834103hwgrIN','\x0a*VIEWS:*\x20','views','99563UadJLi','name','10LXMluy'];_0x56cc=function(){return _0x124eb9;};return _0x56cc();}function _0x2493(_0x75d29c,_0x82bebc){const _0x56cc0e=_0x56cc();return _0x2493=function(_0x2493d3,_0xf39622){_0x2493d3=_0x2493d3-0x165;let _0x1347bc=_0x56cc0e[_0x2493d3];return _0x1347bc;},_0x2493(_0x75d29c,_0x82bebc);}{if(isBan)throw mess[_0x244632(0x18a)];if(!text)throw _0x244632(0x18c)+(prefix+command)+_0x244632(0x183);let yts=require(_0x244632(0x185)),search=await yts(text),no=0x1,sections=[];for(let i of search[_0x244632(0x175)]){const list={'title':''+i[_0x244632(0x18e)],'rows':[{'title':_0x244632(0x174),'rowId':prefix+_0x244632(0x16d)+i[_0x244632(0x16b)],'description':_0x244632(0x16a)+i[_0x244632(0x17e)]+_0x244632(0x181)+i['ago']+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i['url']},{'title':_0x244632(0x169),'rowId':prefix+_0x244632(0x184)+i[_0x244632(0x16b)],'description':_0x244632(0x18d)+i[_0x244632(0x17e)]+'\x0a*UPLOAD:*\x20'+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i[_0x244632(0x16b)]},{'title':'A\x20LINK','rowId':prefix+_0x244632(0x167)+i[_0x244632(0x16b)],'description':_0x244632(0x187)+i[_0x244632(0x17e)]+_0x244632(0x181)+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+'\x0a*LINK:*\x20'+i[_0x244632(0x16b)]}]};sections[_0x244632(0x18f)](list);}const sendm=XeonBotInc[_0x244632(0x168)](m[_0x244632(0x172)],{'text':'㋛︎*'+text+_0x244632(0x176),'footer':'©\x20HBWABOT\x20INC\x202023','title':_0x244632(0x186),'buttonText':_0x244632(0x177),'sections':sections},{'quoted':m});}
+        case 'yts': case 'ytsearch': case 'youtube': const _0x244632=_0x2493;(function(_0x42e7e3,_0x26c668){const _0x3abfea=_0x2493,_0x4da3ee=_0x42e7e3();while(!![]){try{const _0xec78a2=-parseInt(_0x3abfea(0x17b))/0x1+-parseInt(_0x3abfea(0x180))/0x2*(-parseInt(_0x3abfea(0x17f))/0x3)+-parseInt(_0x3abfea(0x18b))/0x4*(-parseInt(_0x3abfea(0x165))/0x5)+parseInt(_0x3abfea(0x173))/0x6+-parseInt(_0x3abfea(0x171))/0x7+parseInt(_0x3abfea(0x166))/0x8*(-parseInt(_0x3abfea(0x16f))/0x9)+parseInt(_0x3abfea(0x17d))/0xa*(-parseInt(_0x3abfea(0x178))/0xb);if(_0xec78a2===_0x26c668)break;else _0x4da3ee['push'](_0x4da3ee['shift']());}catch(_0x4ab77b){_0x4da3ee['push'](_0x4da3ee['shift']());}}}(_0x56cc,0x7bb74));function _0x56cc(){const _0x124eb9=['description','36Wlgwfz','122788qdRqlm','\x0a*UPLOAD:*\x20','timestamp','\x20I\x20thil\x20zawn\x20title\x20chhu\x20rawh*','ytmp4\x20','yt-search','*▊▊▊YOUTUBE\x20SEARCH▊▊▊*','result:\x20url\x20','\x0a*LINK:*\x20','\x0a*DURATION*\x20','ban','4436uTnxYb','*Entirnan\x20:\x20','mimetype:\x20video/mp4\x20','title','push','3850jVGKsb','8OlfmOa','linkok\x20','sendMessage','VIDEO\x20MP4⬤:','mimetype:\x20audio/mp3\x20','url','\x0a*CHANNEL:*\x20','ytmp3\x20','ago','3680244YcUhko','author','961709ryZPhz','chat','553926TdzmkP','HLA\x20MP3⬤:','all','*\n\n*A\x20chhunga\x20hla\x20leh\x20video\x20te\x20hi\x20i\x20thlang\x20thei\x20ang*\n▬▭▬▭▬▭▬▭▬▭▬▭▬▭','I\x20DUH\x20THLANG\x20RAWH','5834103hwgrIN','\x0a*VIEWS:*\x20','views','99563UadJLi','name','10LXMluy'];_0x56cc=function(){return _0x124eb9;};return _0x56cc();}function _0x2493(_0x75d29c,_0x82bebc){const _0x56cc0e=_0x56cc();return _0x2493=function(_0x2493d3,_0xf39622){_0x2493d3=_0x2493d3-0x165;let _0x1347bc=_0x56cc0e[_0x2493d3];return _0x1347bc;},_0x2493(_0x75d29c,_0x82bebc);}{if(isBan)throw mess[_0x244632(0x18a)];if(!text)throw _0x244632(0x18c)+(prefix+command)+_0x244632(0x183);let yts=require(_0x244632(0x185)),search=await yts(text),no=0x1,sections=[];for(let i of search[_0x244632(0x175)]){const list={'title':''+i[_0x244632(0x18e)],'rows':[{'title':_0x244632(0x174),'rowId':prefix+_0x244632(0x16d)+i[_0x244632(0x16b)],'description':_0x244632(0x16a)+i[_0x244632(0x17e)]+_0x244632(0x181)+i['ago']+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i['url']},{'title':_0x244632(0x169),'rowId':prefix+_0x244632(0x184)+i[_0x244632(0x16b)],'description':_0x244632(0x18d)+i[_0x244632(0x17e)]+'\x0a*UPLOAD:*\x20'+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i[_0x244632(0x16b)]},{'title':'A\x20LINK','rowId':prefix+_0x244632(0x167)+i[_0x244632(0x16b)],'description':_0x244632(0x187)+i[_0x244632(0x17e)]+_0x244632(0x181)+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+'\x0a*LINK:*\x20'+i[_0x244632(0x16b)]}]};sections[_0x244632(0x18f)](list);}const sendm=XeonBotInc[_0x244632(0x168)](m[_0x244632(0x172)],{'text':'︎*'+text+_0x244632(0x176),'footer':'©\x20HBWABOT\x20INC\x202023','title':_0x244632(0x186),'buttonText':_0x244632(0x177),'sections':sections},{'quoted':m});}
                   break   
         case 'song': case 'hla':{
         if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Hringnun Vanlalsailova`)
@@ -1573,16 +1573,16 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 let buttonMessage = {
                     image: { url: anulay.thumbnail },
                     caption: `
-${themeemoji} Title : ${anulay.title}
-${themeemoji} Ext : Search
-${themeemoji} ID : ${anulay.videoId}
-${themeemoji} Duration : ${anulay.timestamp}
-${themeemoji} Viewers : ${anulay.views}
-${themeemoji} Upload At : ${anulay.ago}
-${themeemoji} Author : ${anulay.author.name}
-${themeemoji} Channel : ${anulay.author.url}
-${themeemoji} Description : ${anulay.description}
-${themeemoji} Url : ${anulay.url}`,
+♕ Title : ${anulay.title}
+♕ Ext : Search
+♕ ID : ${anulay.videoId}
+♕ Duration : ${anulay.timestamp}
+♕ Viewers : ${anulay.views}
+♕ Upload At : ${anulay.ago}
+♕ Author : ${anulay.author.name}
+♕ Channel : ${anulay.author.url}
+♕ Description : ${anulay.description}
+♕ Url : ${anulay.url}`,
                     footer: botname,
                     buttons: buttons,
                     headerType: 4
@@ -1592,7 +1592,8 @@ ${themeemoji} Url : ${anulay.url}`,
             break 
             case 'ytmp3': case 'ytaudio': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
 const xeonaudp3 = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Youtube video link rawn dah rawh\n\n*Entir nan*: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`
+m.reply(mess.wait)
+if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Youtube video link rawn dah rawh\n\n*Entir nan*: ${prefix + command} https://youtube.com/watch?v=pvwoo-JbQM8`
 const audio=await xeonaudp3.mp3(text)
 await XeonBotInc.sendMessage(m.chat,{
     audio: fs.readFileSync(audio.path),
@@ -2236,10 +2237,10 @@ const xeonvidoh = require('./lib/ytdl2')
 if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) throw `Link rawn dah rawh\n\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
 const vid=await xeonvidoh.mp4(text)
 const ytc=`
-*${themeemoji}Tittle:* ${vid.title}
-*${themeemoji}Date:* ${vid.date}
-*${themeemoji}Duration:* ${vid.duration}
-*${themeemoji}Quality:* ${vid.quality}`
+*♕Tittle:* ${vid.title}
+*♕Date:* ${vid.date}
+*♕Duration:* ${vid.duration}
+*♕Quality:* ${vid.quality}`
 await XeonBotInc.sendMessage(m.chat,{
     video: {url:vid.videoUrl},
     caption: ytc
@@ -2250,7 +2251,7 @@ break
 		let { pinterest } = require('./lib/scraper')
                 anupint = await pinterest(text)
                 result = anupint[Math.floor(Math.random() * anupint.length)]
-                XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: `${themeemoji} Media Url : `+result }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: result }, caption: `♕ Media Url : `+result }, { quoted: m })
             }
             break
             case 'waifu': {
@@ -2286,7 +2287,7 @@ break
                 ]
                 let buttonMessage = {
                     image: { url: result.image[0] },
-                    caption: `${themeemoji} Title : ${result.title}\n${themeemoji} Category : ${result.type}\n${themeemoji} Detail : ${result.source}\n${themeemoji} Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
+                    caption: `♕ Title : ${result.title}\n♕ Category : ${result.type}\n♕ Detail : ${result.source}\n${themeemoji} Media Url : ${result.image[2] || result.image[1] || result.image[0]}`,
                     footer: botname,
                     buttons: buttons,
                     headerType: 4
@@ -3527,8 +3528,8 @@ break
                 let buttonMessage = {
                     image: { url: images },
                     caption: `*-------「 GIMAGE SEARCH 」-------*
-${themeemoji} *Query* : ${text}
-${themeemoji} *Media Url* : ${images}`,
+♕ *Query* : ${text}
+♕ *Media Url* : ${images}`,
                     footer: botname,
                     buttons: buttons,
                     headerType: 4
@@ -3542,7 +3543,7 @@ case 'image': {
 		let { pinterest } = require('./lib/scraperW')
                 anuxeonezy2 = await pinterest(text)
                 resultkkk3 = anuxeonezy2[Math.floor(Math.random() * anuxeonezy2.length)]
-                XeonBotInc.sendMessage(m.chat, { image: { url: resultkkk3 }, caption: ` ${themeemoji} Media Url : `+resultkkk3 }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { image: { url: resultkkk3 }, caption: ` ♕ Media Url : `+resultkkk3 }, { quoted: m })
             }
             break
 case 'swm': case 'stickerwm': case 'wm': case 'take': {  
@@ -3700,7 +3701,7 @@ if (!AntiNsfw) return m.reply(mess.nsfw)
                 const { hentai } = require('./lib/scraper.js')
                 anu = await hentai()
                 result912 = anu[Math.floor(Math.random(), anu.length)]
-                XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `${themeemoji} Title : ${result912.title}\n${themeemoji} Category : ${result912.category}\n${themeemoji} Mimetype : ${result912.type}\n${themeemoji} Views : ${result912.views_count}\n${themeemoji} Shares : ${result912.share_count}\n${themeemoji} Source : ${result912.link}\n${themeemoji} Media Url : ${result912.video_1}` }, { quoted: m })
+                XeonBotInc.sendMessage(m.chat, { video: { url: result912.video_1 }, caption: `♕ Title : ${result912.title}\n♕ Category : ${result912.category}\n♕ Mimetype : ${result912.type}\n♕ Views : ${result912.views_count}\n♕ Shares : ${result912.share_count}\n♕ Source : ${result912.link}\n♕ Media Url : ${result912.video_1}` }, { quoted: m })
             }
             break
 case 'hentai-neko' :
@@ -4991,9 +4992,9 @@ if (!text) return m.reply(`A link rawn dah tel rawh😂`)
         const info = await spotify.getInfo()
         if ((info).error) throw `Spotify link i rawn dah hi a dik lo`
         const { name, artists, album_name, release_date, cover_url } = info
-        const details = `${themeemoji} *Title:* ${name || ''}\n${themeemoji} *Artists:* ${(artists || []).join(
+        const details = `♕ *Title:* ${name || ''}\n♕ *Artists:* ${(artists || []).join(
             ','
-        )}\n${themeemoji} *Album:* ${album_name}\n${themeemoji} *Release Date:* ${release_date || ''}`
+        )}\n♕ *Album:* ${album_name}\n♕ *Release Date:* ${release_date || ''}`
        const response = await XeonBotInc.sendMessage(m.chat, { image: { url: cover_url }, caption: details }, { quoted: m })
         const bufferpotify = await spotify.download()
         await XeonBotInc.sendMessage(m.chat, { audio: bufferpotify }, { quoted: response })

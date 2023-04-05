@@ -1394,9 +1394,29 @@ break
 		    await fs.unlinkSync(encmedia)
 		}
 	    }
-	    break
+	    break 
+	     case 'tts2':
+  const gtts = require('./HBMedia/gtts')(args[0])
+  if (args.length < 1) return XeonBotInc.sendMessage(from, `Entirnan: ${prefix}en hello`, text, {quoted: m})
+  if (args.length < 2) return XeonBotInc.sendMessage(from, `Entirnan: ${prefix}en hello`, text, {quoted: m})
+ var dtt = body.slice(20)
+  reply(mess.wait)
+  var ranm = getRandom('.mp3')
+		var	rano = getRandom('.ogg')
+				dtt.length > 300
+         gtts.save(ranm, dtt, function() {
+          exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+          fs.unlinkSync(ranm)
+          buffer = fs.readFileSync(rano)
+          if (err) return reply('error')
+          Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
+          XeonBotInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+          fs.unlinkSync(rano)
+          })
+          })
+  break
          case 'tts': case 'tawng':{
-         	if (!text) throw `\n*Entir nan* : ${prefix + command} text`
+         	if (!text) throw `\n*Entirnan* : ${prefix + command} text`
              let tts = await fetchJson(`https://api.akuari.my.id/texttovoice/texttosound_english?query=${text}`)
              XeonBotInc.sendMessage(m.chat, { audio: { url: tts.result }, mimetype: 'audio/mp4', ptt: true, fileName: `${text}.mp3` }, { quoted: m })
          	}
@@ -1592,15 +1612,31 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
             break 
             case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate2')
+                m.reply(mess.wait)
                 if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
+{
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})                
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
-            break
-            case 'ytmp3':
-if (!args || !args[0]) throw 'Entirnan: ytmp3 https://youtu.be/xpJ0R7iOKls'
+            break 
+           case 'ytmp3': case 'ytaudio': {
+                let { yta } = require('./lib/y2mate2')
+                m.reply(mess.wait)
+                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls 128kbps`
+{
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})                
+                let quality = args[1] ? args[1] : '128kbps'
+                let media = await yta(text, quality)
+                if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
+                XeonBotInc.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
+                XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+            }
+            break 
+            case 'audio':
+if (!args || !args[0]) throw 'Entirnan: audio https://youtu.be/xpJ0R7iOKls'
 if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
 XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')

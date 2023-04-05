@@ -1621,56 +1621,7 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
-            break                         
-case 'playmp3': //Herbert
-if (!text) throw `\n*Entir nan* : ${prefix + command} K Hminga ka hringnun dairy`
-const xeonplaymp3 = require('./lib/ytdl2') 
-m.reply(mess.wait)
-let yts = require("youtube-yts")
-        let search = await yts(text)
-        let anup3k = search.videos[0]
-const pl= await xeonplaymp3.mp3(anup3k.url)
-await XeonBotInc.sendMessage(m.chat,{
-    audio: fs.readFileSync(pl.path),
-    fileName: anup3k.title + '.mp3',
-    mimetype: 'audio/mp4', ptt: false,
-    contextInfo:{
-        externalAdReply:{
-            title:anup3k.title,
-            body: botname,
-            thumbnail: await fetchBuffer(pl.meta.image),
-            mediaType:2,
-            mediaUrl:anup3k.url,
-        }
-
-    },
-},{quoted:m})
-await fs.unlinkSync(pl.path)
-break
-case 'playmp4': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-if(!text) throw `\n*Entir nan* : ${prefix + command} anime whatsapp status`
-const xeonplaymp4 = require('./lib/ytdl2')
-m.reply(mess.wait)
-let ytsmp4 = require("youtube-yts")
-        let xeonsearch13 = await ytsmp4(text)
-        let anuvidoke4 = xeonsearch13.videos[0]
-const pl2= await xeonplaymp4.mp4(anuvidoke4.url)
-await XeonBotInc.sendMessage(m.chat,{
-    document: {url:pl2.videoUrl},
-    fileName: anuvidoke4.title + '.mp4',
-    mimetype: 'video/mp4',
-    contextInfo:{
-        externalAdReply:{
-            title:anuvidoke4.title,
-            body: botname,
-            thumbnail: await fetchBuffer(anuvidoke4.thumbnail),
-            mediaType:2,
-            mediaUrl:anuvidoke4.url,
-        }
-
-    },
-},{quoted:m})
-break 
+            break                          
 	    case 'logo': {
 	    if (!text) return reply(`\n*Entir nan :* ${prefix + command} HBMods`)
 	const sections = [{

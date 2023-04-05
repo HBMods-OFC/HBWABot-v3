@@ -1622,19 +1622,19 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break 
-            case 'ytmp3': {
+            case 'ytmp3': case 'getmusic': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate2')
                 m.reply(mess.wait)
-                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls 128kbps`
+                if (!text) return reply(`Example : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`) 
 {
-XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})                
-                let quality = args[1] ? args[1] : '128kbps'
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
+                let quality = args[1] ? args[1] : '320kbps'
                 let media = await yta(text, quality)
-                if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
-                XeonBotInc.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                XeonBotInc.sendImage(m.chat, media.thumb, `♕ Title : ${media.title}\n♕ File Size : ${media.filesizeF}\n♕ Url : ${isUrl(text)}`, m)
                 XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
-            break 
+            break
             case 'audio':
 if (!args || !args[0]) throw 'Entirnan: audio https://youtu.be/xpJ0R7iOKls'
 if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`

@@ -1622,7 +1622,7 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
             break 
-           case 'ytmp3': case 'ytaudio': {
+            case 'ytmp3': case 'ytaudio': {
                 let { yta } = require('./lib/y2mate2')
                 m.reply(mess.wait)
                 if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls 128kbps`

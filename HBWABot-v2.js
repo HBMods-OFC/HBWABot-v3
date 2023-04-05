@@ -4777,7 +4777,7 @@ case 'engtin': {
             }
             break
 case 'runtime': {
-            	let lowq = `*The Bot Has Been Online For:*\n*${runtime(process.uptime())}*`
+            	let lowq = `*${runtime(process.uptime())}*\n Chhung a online tawh a ni*`
                 let buttons = [{ buttonId: 'menu', buttonText: { displayText: 'Menu' }, type: 1 }]
                 await XeonBotInc.sendButtonText(m.chat, buttons, lowq, botname, m, {quoted: fkontak})
             	}

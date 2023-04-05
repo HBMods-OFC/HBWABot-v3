@@ -1590,26 +1590,30 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break 
-            case 'ytmp3': case 'ytaudio': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-const xeonaudp3 = require('./lib/ytdl2')
-m.reply(mess.wait)
-if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Youtube video link rawn dah rawh\n\n*Entir nan*: ${prefix + command} https://youtube.com/watch?v=pvwoo-JbQM8`
-const audio=await xeonaudp3.mp3(text)
-await XeonBotInc.sendMessage(m.chat,{
-    audio: fs.readFileSync(audio.path),
-    mimetype: 'audio/mp4', ptt: false,
-    contextInfo:{
-        externalAdReply:{
-            title:audio.meta.title,
-            body: botname,
-            thumbnail: await fetchBuffer(audio.meta.image),
-            mediaType:2,
-            mediaUrl:text,
-        }
+            case 'ytmp3':
+if (!args || !args[0]) throw 'Entirnan: ytmp3 https://youtu.be/xpJ0R7iOKls'
+if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
+const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
+await XeonBotInc.sendMessage(m.chat, {text: `♲ Nghak lawk rawh..`}, {quoted: m})
+if (!jsoni.status || !jsoni.data.url) throw `Download thei lo..`
+let captiono = `*Y T - P L A Y*\n\n`
+captiono += `	◦  *Title* : ${jsoni.title}\n`
+captiono += `	◦  *Size* : ${jsoni.data.size}\n`
+captiono += `	◦  *Duration* : ${jsoni.duration}\n`
+captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
+captiono += 'HBWAABot'
+zimbotu =  `${jsoni.data.url}`
 
-    },
-},{quoted:m})
-await fs.unlinkSync(audio.path)
+XeonBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
+title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
+body:"SUB HBMODS CHANNEL",
+showAdAttribution: true,
+mediaType:2,
+thumbnail: fs.readFileSync(`./HBMedia/theme/hbwabot.jpg`) ,
+mediaUrl:`https://wa.me/918416093656`, 
+sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
+}}, {quoted: m})
 break
             
 case 'playmp3': //Herbert

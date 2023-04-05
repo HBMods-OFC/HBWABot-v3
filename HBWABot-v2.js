@@ -1590,6 +1590,15 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 XeonBotInc.sendMessage(m.chat, buttonMessage, { quoted: m })
             }
             break 
+            case 'ytmp4': case 'ytvideo': {
+                let { ytv } = require('./lib/y2mate2')
+                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
+                let quality = args[1] ? args[1] : '360p'
+                let media = await ytv(text, quality)
+                if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
+                XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
+            }
+            break
             case 'ytmp3':
 if (!args || !args[0]) throw 'Entirnan: ytmp3 https://youtu.be/xpJ0R7iOKls'
 if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
@@ -2236,26 +2245,6 @@ const listMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 }
 break 
-case 'ytmp4': case 'ytvideo': 
-const dripsvideo = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !dripsvideo.isYTUrl(text)) throw `Link rawn dah rawh\n*Entir nan* : ytmp4 https://youtu.be/xpJ0R7iOKls 128kbps`
-XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
-const v5=await dripsvideo.mp4(text)
-/*var capti = `
-▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
-    ⟮ _*◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉*_ ⟯ 
-   
-0.02━◉━━━━━━━━━━━━3.26
-      🔂   ⏪   ⏸️     ⏩  🎵\n\n*◉Title* : ${media.title}\n*◉FILESIZE* : ${media.filesizeF}\n*◉URL* : ${isUrl(text)}\n*◉EXT* : MP3\n*◉RESOLUTION* : ${args[1] || '360p'}\n\n*HBWABotInc*`
-*/
-var buf = await getBuffer(v5.thumb)
-let hobho = ('♲ Nghak lawk rawh..')
-await XeonBotInc.sendMessage(m.chat, {text: `♲ Nghak lawk rawh..`}, {quoted: m})
-XeonBotInc.sendMessage(m.chat, { video: { url:v5.videoUrl }, mimetype: 'video/mp4', fileName: `${v5.title}.mp4`, caption: `*ᴛɪᴛʟᴇ:* ${v5.title} \n\n *ɢɪᴛʜᴜʙ: https://youtube.com/@HBMods_Channel*` , quoted: m,contextInfo: { externalAdReply:{
-showAdAttribution: true,
-},
-}},{ quoted: m})
-break
             case 'pinterest': {
                 m.reply(mess.wait)
 		let { pinterest } = require('./lib/scraper')

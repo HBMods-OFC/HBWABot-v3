@@ -2236,19 +2236,25 @@ const listMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 }
 break 
-case 'ytmp4': case 'ytvideo': //credit: Ray Senpai ❤️ https://github.com/EternityBots/Nezuko
-const xeonvidoh = require('./lib/ytdl2')
-if (args.length < 1 || !isUrl(text) || !xeonvidoh.isYTUrl(text)) throw `Link rawn dah rawh\n\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
-const vid=await xeonvidoh.mp4(text)
-const ytc=`
-*♕Tittle:* ${vid.title}
-*♕Date:* ${vid.date}
-*♕Duration:* ${vid.duration}
-*♕Quality:* ${vid.quality}`
-await XeonBotInc.sendMessage(m.chat,{
-    video: {url:vid.videoUrl},
-    caption: ytc
-},{quoted:m})
+case 'ytmp4': case 'ytvideo': 
+const dripsvideo = require('./lib/ytdl2')
+if (args.length < 1 || !isUrl(text) || !dripsvideo.isYTUrl(text)) throw `Link rawn dah rawh\n*Entir nan* : ytmp4 https://youtu.be/xpJ0R7iOKls 128kbps`
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
+const v5=await dripsvideo.mp4(text)
+/*var capti = `
+▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    ⟮ _*◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉*_ ⟯ 
+   
+0.02━◉━━━━━━━━━━━━3.26
+      🔂   ⏪   ⏸️     ⏩  🎵\n\n*◉Title* : ${media.title}\n*◉FILESIZE* : ${media.filesizeF}\n*◉URL* : ${isUrl(text)}\n*◉EXT* : MP3\n*◉RESOLUTION* : ${args[1] || '360p'}\n\n*HBWABotInc*`
+*/
+var buf = await getBuffer(v5.thumb)
+let hobho = ('♲ Nghak lawk rawh..')
+await XeonBotInc.sendMessage(m.chat, {text: `♲ Nghak lawk rawh..`}, {quoted: m})
+XeonBotInc.sendMessage(m.chat, { video: { url:v5.videoUrl }, mimetype: 'video/mp4', fileName: `${v5.title}.mp4`, caption: `*ᴛɪᴛʟᴇ:* ${v5.title} \n\n *ɢɪᴛʜᴜʙ: https://youtube.com/@HBMods_Channel*` , quoted: m,contextInfo: { externalAdReply:{
+showAdAttribution: true,
+},
+}},{ quoted: m})
 break
             case 'pinterest': {
                 m.reply(mess.wait)

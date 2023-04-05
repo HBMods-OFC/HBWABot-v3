@@ -1548,9 +1548,6 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 {
                     title: i.title,
                     rows: listSerch
-                }, {
-                    title: i.title,
-                    rows: listSerch
                 }
             ]
             const listMessage = {

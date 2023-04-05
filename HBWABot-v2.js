@@ -1621,32 +1621,7 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
                 XeonBotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '360p'}` }, { quoted: m })
             }
-            break             
-            case 'audio':
-if (!args || !args[0]) throw 'link rawn dah tel rawh'
-if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
-ZimBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
-const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
-await ZimBotInc.sendMessage(m.chat, {text: `♲ Nghak lawk rawh.. `}, {quoted: m})
-if (!jsoni.status || !jsoni.data.url) throw `Download thei lo a ni`
-let captiono = `*Y T - P L A Y*\n\n`
-captiono += `	◦  *Title* : ${jsoni.title}\n`
-captiono += `	◦  *Size* : ${jsoni.data.size}\n`
-captiono += `	◦  *Duration* : ${jsoni.duration}\n`
-captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
-captiono += 'HBWABot'
-zimbotu =  `${jsoni.data.url}`
-
-ZimBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
-title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB HBMODS CHANNEL",
-showAdAttribution: true,
-mediaType:2,
-thumbnail: fs.readFileSync(`./HBMedia/theme/hwabot.jpg`) ,
-mediaUrl:`https://wa.me/918416093656`, 
-sourceUrl: `https://youtube.com/c/HBSuantakOfficialChannel` }
-}}, {quoted: m})
-breakk           
+            break                         
 case 'playmp3': //Herbert
 if (!text) throw `\n*Entir nan* : ${prefix + command} K Hminga ka hringnun dairy`
 const xeonplaymp3 = require('./lib/ytdl2') 

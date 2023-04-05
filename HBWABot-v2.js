@@ -4777,10 +4777,14 @@ case 'engtin': {
             }
             break
 case 'runtime': {
-            	let lowq = `*${runtime(process.uptime())}*\n Chhung a online tawh a ni*`
+            	let lowq = `*${runtime(process.uptime())}*\n*Chhung a online tawh a ni*`
                 let buttons = [{ buttonId: 'menu', buttonText: { displayText: 'Menu' }, type: 1 }]
                 await XeonBotInc.sendButtonText(m.chat, buttons, lowq, botname, m, {quoted: fkontak})
             	}
+            break 
+            case 'herbert': case 'siamtu': {
+                XeonBotInc.sendContact(m.chat, global.owner, m)
+            }
             break
 case 'handsomecheck':
 				if (!text) return m.reply(`Tu emaw ber tag rawh, \n*Entir nan* : ${prefix + command} @Jda`)

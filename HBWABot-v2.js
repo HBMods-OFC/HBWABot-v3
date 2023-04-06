@@ -1547,12 +1547,12 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
             }
         break 
         case 'ytmp3':
-if (!args || !args[0]) throw 'need a link'
-if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Invalid link`
+if (!args || !args[0]) throw 'Entirnan : *ytmp3 https://youtu.be/xpJ0R7iOKls*'
+if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
 XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
-await XeonBotInc.sendMessage(m.chat, {text: `*ɪᴍ sᴇɴᴅɪɴɢ ʏᴏᴜʀ sᴏɴɢ📻ᴘʟᴇᴀsᴇ ᴡᴀɪᴛ...* `}, {quoted: m})
-if (!jsoni.status || !jsoni.data.url) throw `failed to download your music`
+await XeonBotInc.sendMessage(m.chat, {text: `*↺Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
+if (!jsoni.status || !jsoni.data.url) throw `Download thei lo`
 let captiono = `*Y T - P L A Y*\n\n`
 captiono += `	◦  *Title* : ${jsoni.title}\n`
 captiono += `	◦  *Size* : ${jsoni.data.size}\n`
@@ -1563,16 +1563,16 @@ zimbotu =  `${jsoni.data.url}`
 
 XeonBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
 title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB DRIPS OFC",
+body:"SUB HBMods Channel",
 showAdAttribution: true,
 mediaType:2,
 thumbnail: thumb,
-mediaUrl:`https://wa.me/447441437150`, 
-sourceUrl: `https://youtu.be/KNu-gr2h7bo` }
+mediaUrl:`https://wa.me/918416/93656`, 
+sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
 }}, {quoted: m})
 break
 case 'ytmp4': case 'ytvideo': 
-const dripsvideo = require('./lib/ytdl2')
+const dripsvideo = require('./lib/ytdl')
 if (args.length < 1 || !isUrl(text) || !dripsvideo.isYTUrl(text)) throw `Where is the link?🤪`
 XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const v5=await dripsvideo.mp4(text)

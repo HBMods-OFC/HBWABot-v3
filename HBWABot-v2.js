@@ -1342,12 +1342,10 @@ break
             break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
             if (!quoted) throw `*Video emaw thlalak a caption ah* ${prefix + command} *tih rawn type rawh*`
-           {
-XeonBotInc.sendMessage(m.chat, { react: { text: `🧩`, key: m.key }})
               m.reply(mess.wait)
-                    if (/image/.test(mime)) {
+              if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+                let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { react: { text: `🧩`, key: m.key }} { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
                 if ((quoted.msg || quoted).seconds > 11) return m.reply('*Second 10 aia tam a thei lo..!*')

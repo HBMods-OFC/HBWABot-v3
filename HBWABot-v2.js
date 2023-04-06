@@ -5308,11 +5308,8 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 break 
 case 'gbwhatsapp2':
             case 'gb2': {
-               if (db.data.settings[botNumber].typemenu2 == 'templateGif') {
-                    XeonBotInc.sendButtonText(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
-                }
-                if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
-                    XeonBotInc.send5ButImg(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
+               if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
+                    XeonBotInc.send5ButImg(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
                 }
             }
             break

@@ -245,7 +245,7 @@ antilink: false,
 		if (!('autobio' in setting)) setting.autobio = false
 		if (!('templateImage' in setting)) setting.templateImage = true
 		if (!('templateVideo' in setting)) setting.templateVideo = false
-		if (!('templateGif' in setting)) setting.templateGif = false
+		if (!('templateGif' in setting)) setting.templateGif = true
 		if (!('templateMsg' in setting)) setting.templateMsg = false	
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
@@ -341,7 +341,7 @@ mediaUrl: websitex,
 previewType: "PHOTO",
 thumbnail: thumb,
 sourceUrl: "",
-detectLinks: false,
+detectLinks: true,
     }}
     
     //reply fake
@@ -5306,6 +5306,16 @@ he mi mod bik hi i install thei loh a nih chuan a hman dan tur hrilhfiahna butto
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break 
+case 'gbwhatsapp2':
+            case 'gb2': {
+               if (db.data.settings[botNumber].typemenu2 == 'templateGif') {
+                    XeonBotInc.sendButtonText(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
+                }
+                if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
+                    XeonBotInc.send5ButImg(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
+                }
+            }
+            break
 case 'gb': case 'gbwhatsapp': {
 var unicorn = await getBuffer(picak+'GBWhatsApp')
 

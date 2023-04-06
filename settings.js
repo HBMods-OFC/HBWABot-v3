@@ -27,12 +27,17 @@ global.premium = ['918416093656'] //ur premium number
 global.botname = 'HBWABot' //ur bot name
 global.linkz = "https://chat.whatsapp.com/C46rhzrso48Cq2rmIrR4Fj" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtube.com/@HBMods_Channel" //ur website to be displayed
+global.gbwa1 = "https://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1" //
+global.gbwa2 = "https://herbert70.blogspot.com/2022/12/app-name-gbwhatsapp-pro-version-17.html?m=1" //
 global.botscript = 'https://instagram.com/herbert_suantak2' //script link
 global.themeemoji = "🌚" //ur theme emoji
 global.packname = "Siamted by" //ur sticker watermark packname
 global.author = "HBWABot" //ur sticker watermark author
 global.wm = "HBWABot" //ur watermark
-
+global.reactmoji = "❤️" 
+global.typemenu = 'templateImage' //
+//type menu for downloadmenu, animemenu, etc
+global.typemenu2 = 'templateImage' ////type menu for downloadmenu, animemenu, etc
 // Other
 global.sessionName = 'session'
 global.prefa = ['','!','.','#','&']
@@ -85,7 +90,33 @@ global.limitAwal = {
  prem: 'Unlimited',
  free: 70
 }
-
+//url burton
+global.buttonDefault6 = [{
+   urlButton: {
+      displayText: 'GBWhatsApp',
+      url: gbwa1
+   }
+}, {
+   urlButton: {
+      displayText: 'GBWhatsApp Pro',
+      url: gbwa2
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'GBWhatsApp',
+      id: '.gb'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'YOWhatsApp',
+      id: '.yo'
+   }
+}, {
+   quickReplyButton: {
+      displayText: 'FMWhatsApp',
+      id: '.fm'
+   }
+}]
 //adventure2
 global.emot = {
 role: '🏆',

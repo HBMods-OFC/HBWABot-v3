@@ -245,7 +245,7 @@ antilink: false,
 		if (!('autobio' in setting)) setting.autobio = false
 		if (!('templateImage' in setting)) setting.templateImage = true
 		if (!('templateVideo' in setting)) setting.templateVideo = false
-		if (!('templateGif' in setting)) setting.templateGif = false
+		if (!('templateGif' in setting)) setting.templateGif = true
 		if (!('templateMsg' in setting)) setting.templateMsg = false	
 	    } else global.db.data.settings[botNumber] = {
 		status: 0,
@@ -341,7 +341,7 @@ mediaUrl: websitex,
 previewType: "PHOTO",
 thumbnail: thumb,
 sourceUrl: "",
-detectLinks: false,
+detectLinks: true,
     }}
     
     //reply fake
@@ -1342,13 +1342,13 @@ break
             break
             case 'sticker': case 's': case 'stickergif': case 'sgif': {
             if (!quoted) throw `*Video emaw thlalak a caption ah* ${prefix + command} *tih rawn type rawh*`
-              m.reply(mess.wait)
-              if (/image/.test(mime)) {
+            m.reply(mess.wait)
+                    if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { react: { text: `🧩`, key: m.key }} { packname: global.packname, author: global.author })
+                let encmedia = await XeonBotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
-                if ((quoted.msg || quoted).seconds > 11) return m.reply('*Second 10 aia tam a thei lo..!*')
+                if ((quoted.msg || quoted).seconds > 11) return m.reply('*Second 10 aia tam a thei loh!*')
                 let media = await quoted.download()
                 let encmedia = await XeonBotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
                 await fs.unlinkSync(encmedia)
@@ -1394,7 +1394,26 @@ break
 		}
 	    }
 	    break 
-	     
+	     case 'tts2':
+  const gtts = require('./HBMedia/gtts')(args[0])
+  if (args.length < 1) return XeonBotInc.sendMessage(from, `Entirnan: ${prefix}en hello`, text, {quoted: m})
+  if (args.length < 2) return XeonBotInc.sendMessage(from, `Entirnan: ${prefix}en hello`, text, {quoted: m})
+ var dtt = body.slice(20)
+  reply(mess.wait)
+  var ranm = getRandom('.mp3')
+		var	rano = getRandom('.ogg')
+				dtt.length > 300
+         gtts.save(ranm, dtt, function() {
+          exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+          fs.unlinkSync(ranm)
+          buffer = fs.readFileSync(rano)
+          if (err) return reply('error')
+          Ruri.sendMessage(from,  audio, {quoted: freply, ptt:true})
+          XeonBotInc.sendMessage(m.chat, { audio: buffer, mimetype: 'audio/mp4', ptt: true, quoted: mudratunha})
+          fs.unlinkSync(rano)
+          })
+          })
+  break
          case 'tts': case 'tawng':{
          	if (!text) throw `\n*Entirnan* : ${prefix + command} text`
              let tts = await fetchJson(`https://api.akuari.my.id/texttovoice/texttosound_english?query=${text}`)
@@ -1554,10 +1573,7 @@ sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
 break
 case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate2')
-                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p` 
-                {
-XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
-                m.reply(mess.wait)
+                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 360p`
                 let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
@@ -1600,9 +1616,6 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `🕜`, key: m.key }})
         
     case 'play': case 'ytplay':{
                 if (!text) throw `\n*Entir nan* : ${prefix + command} K hminga siar lalnu`
-                m.reply(mess.wait)
-                {
-XeonBotInc.sendMessage(m.chat, { react: { text: `▶️`, key: m.key }})
                 let yts = require("youtube-yts")
                 let search = await yts(text)
                 let anulay = search.videos[Math.floor(Math.random() * search.videos.length)]
@@ -1632,8 +1645,6 @@ XeonBotInc.sendMessage(m.chat, { react: { text: `▶️`, key: m.key }})
             break                                      
 	        case 'logo': {
 	    if (!text) return reply(`\n*Entir nan :* ${prefix + command} HBMods`)
-	    {
-XeonBotInc.sendMessage(m.chat, { react: { text: `1️⃣`, key: m.key }})
 	const sections = [{
 								"title": "A hnuaia Logo button te khu hmet rawh",
 								"rows": [
@@ -2062,8 +2073,6 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 break 
             case 'logo2': {
 	    if (!text) return reply(`\n*Entir nan :* ${prefix + command} HBMods|Cannel`)
-	    {
-XeonBotInc.sendMessage(m.chat, { react: { text: `2️⃣`, key: m.key }})
 	const sections = [{
 								"title": "A hnuaia Logo button te khu hmet rawh",
 								"rows": [
@@ -2158,9 +2167,7 @@ const buttonMessage = {
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break
-case 'whatsapp': case 'whatsappmod': case 'hbmods': case 'mod': { 
-{
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+case 'whatsapp': case 'whatsappmod': case 'hbmods': case 'mod': {
 	   const sections = [{
 								"title": "WhatsApp Mod hrang hrang i duh ber khu la chhuak rawh",
 								"rows": [
@@ -5238,7 +5245,6 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break 
 case 'fmwhatsapp': case 'fm': case 'fouad': case 'fouadmod': {
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
 	   const sections = [{
 								"title": "Heng te hi an ni",
 								"rows": [
@@ -5267,7 +5273,7 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 break 
 case 'fouad1':{
 var unicorn = await getBuffer(picak+'FMWhatsApp')
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+
 const buttons = [
   {buttonId: 'fouad2', buttonText: {displayText: '⏭Next️'}, type: 1}
 ]
@@ -5284,7 +5290,7 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 break 
 case 'fouad2':{
 var unicorn = await getBuffer(picak+'WhatsApp')
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+
 const buttons = [
   {buttonId: 'hmandan', buttonText: {displayText: 'Eng tin nge hman tur?'}, type: 1}
 ]
@@ -5300,9 +5306,16 @@ he mi mod bik hi i install thei loh a nih chuan a hman dan tur hrilhfiahna butto
 const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 }
 break 
+case 'gbwhatsapp2':
+            case 'gb2': {
+               if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
+                    XeonBotInc.send5ButImg(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
+                }
+            }
+            break
 case 'gb': case 'gbwhatsapp': {
 var unicorn = await getBuffer(picak+'GBWhatsApp')
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+
 const buttons = [
   {buttonId: 'gbpro', buttonText: {displayText: 'GBWhatsApp Pro️'}, type: 1}
 ]
@@ -5319,7 +5332,7 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 break
 case 'gbpro':{
 var unicorn = await getBuffer(picak+'GBWhatsApp Pro')
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+
 const buttons = [
   {buttonId: 'ogwhatsapp', buttonText: {displayText: 'OGWhatsApp️'}, type: 1}
 ]
@@ -5353,7 +5366,7 @@ const sendMsg = await XeonBotInc.sendMessage(m.chat, buttonMessage)
 break 
 case 'yowhatsapp': case 'yo': {
 var unicorn = await getBuffer(picak+'YOWhatsApp')
-XeonBotInc.sendMessage(m.chat, { react: { text: `🪀`, key: m.key }})
+
 const buttons = [
   {buttonId: 'gbwhatsapp', buttonText: {displayText: 'GBWhatsApp️'}, type: 1}
 ]

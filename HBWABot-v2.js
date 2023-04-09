@@ -1322,302 +1322,302 @@ case 'ytmp4': case 'ytvideo': {
             let ytslagu = require("youtube-yts")
             let search = await yts(text)
 	const sections = [{
-								"title": `${search.all[0]title}`
+								"title": `${search.all[0]title}`,,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[0]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[0].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[0].url}`,,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[0]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[0].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[0].url}`,,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[1]title}`
+								"title": `${search.all[1]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[1]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[1].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[1].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[1]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[1].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[1].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[2]title}`
+								"title": `${search.all[2]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[2]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[2].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[2].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[2]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[2].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[2].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[3]title}`
+								"title": `${search.all[3]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[3]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[3].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[3].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[3]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[3].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[3].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[4]title}`
+								"title": `${search.all[4]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[4]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[4].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[4].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[4]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[4].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[4].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[5]title}`
+								"title": `${search.all[5]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[5]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[5].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[5].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[5]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[5].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[5].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[6]title}`
+								"title": `${search.all[6]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[6]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[6].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[6].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[6]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[6].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[6].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[7]title}`
+								"title": `${search.all[7]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[7]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[7].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[7].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[7]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[7].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[7].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[8]title}`
+								"title": `${search.all[8]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[8]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[8].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[8].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[8]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[8].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[8].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[9]title}`
+								"title": `${search.all[9]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[9]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[9].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[9].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[9]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[9].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[9].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[10]title}`
+								"title": `${search.all[10]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[10]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[10].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[10].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[10]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[10].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[10].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[11]title}`
+								"title": `${search.all[11]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[11]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[11].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[11].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[11]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[11].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[11].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[12]title}`
+								"title": `${search.all[12]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[12]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[12].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[12].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[12]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[12].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[12].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[13]title}`
+								"title": `${search.all[13]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[13]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[13].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[13].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[13]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[13].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[13].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[14]title}`
+								"title": `${search.all[14]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[14]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[14].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[14].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[14]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[14].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[14].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[15]title}`
+								"title": `${search.all[15]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[15]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[15].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[15].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[15]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[15].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[15].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[16]title}`
+								"title": `${search.all[16]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[16]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[16].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[16].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[16]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[16].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[16].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[17]title}`
+								"title": `${search.all[17]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[17]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[17].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[17].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[17]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[17].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[17].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[18]title}`
+								"title": `${search.all[18]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[18]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[18].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[18].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[18]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[18].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[18].url}`,
 									}
 								] 
 								}, 
 								{
-								"title": `${search.all[19]title}`
+								"title": `${search.all[19]title}`,
 								"rows": [
 									{
 										"title": "MP3/HLA",
 										"description": `Duration : ${search.all[19]timestamp}`,
-										"rowId": `${prefix}ytmp3 ${search.all[19].url}`
+										"rowId": `${prefix}ytmp3 ${search.all[19].url}`,
 									}, 
 									{
 										"title": "MP4/VIDEO",
 										"description": `Duration : ${search.all[19]timestamp}`,
-										"rowId": `${prefix}ytmp4 ${search.all[19].url}`
+										"rowId": `${prefix}ytmp4 ${search.all[19].url}`,
 									}
 								] 
 								},
@@ -1626,12 +1626,12 @@ const list Message = {
   text: "*A chhunga hla leh video te hi i thlang thei ang*\n▬▭▬▭▬▭▬▭▬▭▬▭▬▭\n\n",
   footer: `${botname}`,
   title: `*▊▊▊YOUTUBE SEARCH▊▊▊*\n*${text}*\n\n`,
-  buttonText: "DUH THLANG RAWH",
+  buttonText: "Menu",
   sections
 }
 const sendMsg = await XeonBotInc.sendMessage(m.chat, listMessage)
 }
-break       
+break
         case 'yts': case 'ytsearch': case 'youtube': const _0x244632=_0x2493;(function(_0x42e7e3,_0x26c668){const _0x3abfea=_0x2493,_0x4da3ee=_0x42e7e3();while(!![]){try{const _0xec78a2=-parseInt(_0x3abfea(0x17b))/0x1+-parseInt(_0x3abfea(0x180))/0x2*(-parseInt(_0x3abfea(0x17f))/0x3)+-parseInt(_0x3abfea(0x18b))/0x4*(-parseInt(_0x3abfea(0x165))/0x5)+parseInt(_0x3abfea(0x173))/0x6+-parseInt(_0x3abfea(0x171))/0x7+parseInt(_0x3abfea(0x166))/0x8*(-parseInt(_0x3abfea(0x16f))/0x9)+parseInt(_0x3abfea(0x17d))/0xa*(-parseInt(_0x3abfea(0x178))/0xb);if(_0xec78a2===_0x26c668)break;else _0x4da3ee['push'](_0x4da3ee['shift']());}catch(_0x4ab77b){_0x4da3ee['push'](_0x4da3ee['shift']());}}}(_0x56cc,0x7bb74));function _0x56cc(){const _0x124eb9=['description','36Wlgwfz','122788qdRqlm','\x0a*UPLOAD:*\x20','timestamp','\x20I\x20thil\x20zawn\x20title\x20chhu\x20rawh*','ytmp4\x20','yt-search','*▊▊▊YOUTUBE\x20SEARCH▊▊▊*','result:\x20url\x20','\x0a*LINK:*\x20','\x0a*DURATION*\x20','ban','4436uTnxYb','*Entirnan\x20:\x20','mimetype:\x20video/mp4\x20','title','push','3850jVGKsb','8OlfmOa','linkok\x20','sendMessage','VIDEO\x20MP4⬤:','mimetype:\x20audio/mp3\x20','url','\x0a*CHANNEL:*\x20','ytmp3\x20','ago','3680244YcUhko','author','961709ryZPhz','chat','553926TdzmkP','HLA\x20MP3⬤:','all','*\n\n*A\x20chhunga\x20hla\x20leh\x20video\x20te\x20hi\x20i\x20thlang\x20thei\x20ang*\n▬▭▬▭▬▭▬▭▬▭▬▭▬▭','I\x20DUH\x20THLANG\x20RAWH','5834103hwgrIN','\x0a*VIEWS:*\x20','views','99563UadJLi','name','10LXMluy'];_0x56cc=function(){return _0x124eb9;};return _0x56cc();}function _0x2493(_0x75d29c,_0x82bebc){const _0x56cc0e=_0x56cc();return _0x2493=function(_0x2493d3,_0xf39622){_0x2493d3=_0x2493d3-0x165;let _0x1347bc=_0x56cc0e[_0x2493d3];return _0x1347bc;},_0x2493(_0x75d29c,_0x82bebc);}{if(isBan)throw mess[_0x244632(0x18a)];if(!text)throw _0x244632(0x18c)+(prefix+command)+_0x244632(0x183);let yts=require(_0x244632(0x185)),search=await yts(text),no=0x1,sections=[];for(let i of search[_0x244632(0x175)]){const list={'title':''+i[_0x244632(0x18e)],'rows':[{'title':_0x244632(0x174),'rowId':prefix+_0x244632(0x16d)+i[_0x244632(0x16b)],'description':_0x244632(0x16a)+i[_0x244632(0x17e)]+_0x244632(0x181)+i['ago']+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i['url']},{'title':_0x244632(0x169),'rowId':prefix+_0x244632(0x184)+i[_0x244632(0x16b)],'description':_0x244632(0x18d)+i[_0x244632(0x17e)]+'\x0a*UPLOAD:*\x20'+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+_0x244632(0x188)+i[_0x244632(0x16b)]},{'title':'A\x20LINK','rowId':prefix+_0x244632(0x167)+i[_0x244632(0x16b)],'description':_0x244632(0x187)+i[_0x244632(0x17e)]+_0x244632(0x181)+i[_0x244632(0x16e)]+_0x244632(0x16c)+i[_0x244632(0x170)][_0x244632(0x17c)]+_0x244632(0x179)+i[_0x244632(0x17a)]+_0x244632(0x189)+i[_0x244632(0x182)]+'\x0a*LINK:*\x20'+i[_0x244632(0x16b)]}]};sections[_0x244632(0x18f)](list);}const sendm=HBWABotInc[_0x244632(0x168)](m[_0x244632(0x172)],{'text':'︎*'+text+_0x244632(0x176),'footer':'©\x20HBWABOT\x20INC\x202023','title':_0x244632(0x186),'buttonText':_0x244632(0x177),'sections':sections},{'quoted':m});}
                   break   
         case 'song': case 'hla':{

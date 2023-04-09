@@ -1284,7 +1284,7 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
             }
         break 
         case 'ytmp3x': case 'ytaudio': {
-                let { yta } = require('./lib/y2mate2')
+                let { yta } = require('./lib/y2mate')
                 if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtube.com/watch?v=PtFMh6Tccag%27 128kbps`
                 m.reply(mess.wait)
                 let quality = args[1] ? args[1] : '128kbps'

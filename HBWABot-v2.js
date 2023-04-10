@@ -2463,10 +2463,11 @@ maker.textpro("https://textpro.me/create-thunder-text-effect-online-881.html", [
 case 'neon':
    
 if(!q) throw `*Entirnan:* ${prefix + command} Hello`
-m.reply(mess.wait)
+m.reply(mess.wait) 
+HBWABotInc.sendMessage(m.chat, { react: { text: `🧩`, key: m.key }})
 maker.textpro("https://textpro.me/neon-light-text-effect-online-882.html", [
     `${q}`,])
-  .then((data) => HBWABotInc.sendMessage(m.chat, { image: { url: data }, caption: `Siamted by ${global.botname}` }, {react: { text: `🌚`}, key: m.key}, { quoted: m }))
+  .then((data) => HBWABotInc.sendMessage(m.chat, { image: { url: data }, caption: `Siamted by ${global.botname}` }, { quoted: m }))
   .catch((err) => console.log(err));
    break
 case 'matrix2':

@@ -931,14 +931,20 @@ let docs = pickRandom(documents)
                 }
             }
             break            
-            case 'buttonmaker': {
-            if (!isPremium) throw mess.premime
-			if (!text) throw `\n*Entir nan* : ${prefix + command} hi|hello`
-            let jawab = `${text.split("|")[0]}`
-            let buttons = [{ buttonId: 'menu', buttonText: { displayText: `${themeemoji}` }, type: 1 }]
-            await HBWABotInc.sendButtonText(m.chat, buttons, jawab, `${text.split("|")[1]}`, m)
-            }
-            break
+            case 'tourl': {
+   replay(mess.wait)
+let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
+   let media = await HBWABotInc.downloadAndSaveMediaMessage(quoted)
+   if (/image/.test(mime)) {
+  let anu = await TelegraPh(media)
+  reply(util.format(anu))
+   } else if (!/image/.test(mime)) {
+  let anu = await UploadFileUgu(media)
+  reply(util.format(anu))
+   }
+   await fs.unlinkSync(media)
+ }
+ break
             
             case 'react': {
                 if (!isCreator) throw mess.owner
@@ -4992,7 +4998,7 @@ break
 case 'gbwhatsapp2':
             case 'gb2': {
                if (db.data.settings[botNumber].typemenu2 == 'templateImage') {
-                    HBWABotInc.send5ButImg(herbert, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
+                    HBWABotInc.send5ButImg(herbert, reSize, m.chat, `GBWhatsApp version thar ber lo download ve rawh le` + '\n', '©' + ownername, thumb, buttonDefault6, [sender, ownernomer + '@s.whatsapp.net'])
                 }
             }
             break

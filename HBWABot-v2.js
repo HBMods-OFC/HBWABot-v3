@@ -1058,12 +1058,12 @@ break
             m.reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await HBWABotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, react: { text: `🧩` }})
+                let encmedia = await HBWABotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author,})
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
                 if ((quoted.msg || quoted).seconds > 11) return m.reply('*Second 10 aia tam a thei loh!*')
                 let media = await quoted.download()
-                let encmedia = await HBWABotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, react: { text: `🧩` }})
+                let encmedia = await HBWABotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author,})
                 await fs.unlinkSync(encmedia)
             } else {
                 throw `Video emaw thlalak a caption ah *${prefix + command}* rawn dah la\n\n*Video chu second 10 aia tam rawn thawn suh*`
@@ -2466,7 +2466,7 @@ if(!q) throw `*Entirnan:* ${prefix + command} Hello`
 m.reply(mess.wait)
 maker.textpro("https://textpro.me/neon-light-text-effect-online-882.html", [
     `${q}`,])
-  .then((data) => HBWABotInc.sendMessage(m.chat, { image: { url: data }, caption: `Siamted by ${global.botname}` }, { quoted: m }))
+  .then((data) => HBWABotInc.sendMessage(m.chat, { image: { url: data }, caption: `Siamted by ${global.botname}` }, {react: { text: `🌚`}, key: m.key}, { quoted: m }))
   .catch((err) => console.log(err));
    break
 case 'matrix2':

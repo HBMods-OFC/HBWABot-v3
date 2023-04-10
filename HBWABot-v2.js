@@ -931,21 +931,6 @@ let docs = pickRandom(documents)
                 }
             }
             break            
-            case 'tourl': {
-   replay(mess.wait)
-let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
-   let media = await HBWABotInc.downloadAndSaveMediaMessage(quoted)
-   if (/image/.test(mime)) {
-  let anu = await TelegraPh(media)
-  reply(util.format(anu))
-   } else if (!/image/.test(mime)) {
-  let anu = await UploadFileUgu(media)
-  reply(util.format(anu))
-   }
-   await fs.unlinkSync(media)
- }
- break
-            
             case 'react': {
                 if (!isCreator) throw mess.owner
                 reactionMessage = {
@@ -1043,24 +1028,6 @@ let { UploadFileUgu, webp2mp4File, TelegraPh } = require('./lib/uploader')
             HBWABotInc.sendMessage(m.chat, { text : q ? q : '' , mentions: participants.map(a => a.id)}, { quoted: m })
             }
             break
-case 'editinfo': {
-                if (!m.isGroup) throw mess.group
-                if (!isBotAdmins) throw mess.botAdmin
-                if (!isAdmins) throw mess.admin
-             if (args[0] === 'open'){
-                await HBWABotInc.groupSettingUpdate(m.chat, 'unlocked').then((res) => m.reply(`*Successfully Opened Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
-             } else if (args[0] === 'close'){
-                await HBWABotInc.groupSettingUpdate(m.chat, 'locked').then((res) => m.reply(`*Successfully Close Edit Group Info*`)).catch((err) => m.reply(jsonformat(err)))
-             } else {
-             let buttons = [
-                        { buttonId: 'editinfo open', buttonText: { displayText: 'Open' }, type: 1 },
-                        { buttonId: 'editinfo close', buttonText: { displayText: 'Close' }, type: 1 }
-                    ]
-                    await HBWABotInc.sendButtonText(m.chat, buttons, `Mode Edit Info`, botname, m)
-
-            }
-            }
-            break
 case 'stupidcheck':case 'uncleancheck':
 case 'hotcheck': case 'smartcheck':
 case 'greatcheck':
@@ -1091,12 +1058,12 @@ break
             m.reply(mess.wait)
                     if (/image/.test(mime)) {
                 let media = await quoted.download()
-                let encmedia = await HBWABotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+                let encmedia = await HBWABotInc.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, react: { text: `🧩` }})
                 await fs.unlinkSync(encmedia)
             } else if (/video/.test(mime)) {
                 if ((quoted.msg || quoted).seconds > 11) return m.reply('*Second 10 aia tam a thei loh!*')
                 let media = await quoted.download()
-                let encmedia = await HBWABotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
+                let encmedia = await HBWABotInc.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author, react: { text: `🧩` }})
                 await fs.unlinkSync(encmedia)
             } else {
                 throw `Video emaw thlalak a caption ah *${prefix + command}* rawn dah la\n\n*Video chu second 10 aia tam rawn thawn suh*`

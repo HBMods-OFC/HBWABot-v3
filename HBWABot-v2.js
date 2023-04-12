@@ -4962,21 +4962,7 @@ case 'gbwhatsapp2':
                 }
             }
             break 
-            case 'bb': case 'll': {
-const buttons = [
-  {buttonId: 'gbpro', buttonText: {displayText: 'GBWhatsApp Pro️'}, type: 1}
-]
-const buttonMessage = {
-    image: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg'
-    caption: `*GBWhatsApp*\nhttps://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1`,
-    footer: `${botname}`,
-    buttons: buttons,
-    headerType: 4
-}
-const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
-}
-break
-case 'gb': case 'gbwhatsapp': {
+          case 'gb': case 'gbwhatsapp': {
 var unicorn = await getBuffer(picak+'GBWhatsApp')
 
 const buttons = [

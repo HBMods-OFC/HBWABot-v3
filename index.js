@@ -160,9 +160,9 @@ let docs = pickRandom(documents)
         let nama = await HBWABotInc.getName(num)
 memb = metadata.participants.length
 
-Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+Kon = await getBuffer(`https://imgur.com/GBRIWii.gif`)
 
-Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+Tol = await getBuffer(`https://imgur.com/GBRIWii.gif`)
                 if (anu.action == 'add') {
                     HBWABotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `Hi @${num.split("@")[0]}, Kan group-ah hian kan lo lawm a che` })
                 }

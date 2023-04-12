@@ -4968,8 +4968,7 @@ const buttons = [
 ]
 const buttonMessage = {
     image: 'https://telegra.ph/file/6ba2aed566865a068e91f.jpg'
-    caption: `*GBWhatsApp*
-https://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1`,
+    caption: `*GBWhatsApp*\nhttps://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1`,
     footer: `${botname}`,
     buttons: buttons,
     headerType: 4

@@ -160,7 +160,7 @@ let docs = pickRandom(documents)
         let nama = await HBWABotInc.getName(num)
 memb = metadata.participants.length
 XeonWlcm = await getBuffer(ppuser)
-XeonLft = await getBuffer(ppuser)
+thumb = await getBuffer(ppuser)
                 if (anu.action == 'add') {
                 const xeonbuffer = await getBuffer(ppuser)
                 let xeonName = num
@@ -182,7 +182,7 @@ let buttons = [
 {buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./HBMedia/theme/cheems.xlsx'),
+document: fs.readFileSync('./HBMedia/theme/herbert.xlsx'),
 mimetype: docs,
 jpegThumbnail:XeonWlcm,
 mentions: [num],
@@ -223,9 +223,9 @@ let buttons = [
 {buttonId: `wkwkwk`, buttonText: {displayText: 'Mangtha🥀'}, type: 1}
 ]
 let buttonMessage = {
-document: fs.readFileSync('./HBMedia/theme/cheems.xlsx'),
+document: fs.readFileSync('./HBMedia/theme/herbert.xlsx'),
 mimetype: docs,
-jpegThumbnail:XeonLft,
+jpegThumbnail:thumb,
 mentions: [num],
 fileName: `${metadata.subject}`,
 fileLength: 99999999999999,
@@ -237,7 +237,7 @@ contextInfo:{externalAdReply:{
 title: `${pushname}`,
 body: `Bye! lo in enkawl tha ang che`,
 mediaType:2,
-thumbnail: XeonLft,
+thumbnail: thumb,
 sourceUrl: `${websitex}`,
 mediaUrl: `${websitex}`
 }}
@@ -289,7 +289,7 @@ HBWABotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await HBWABotInc.getName(i),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:꧁Herbert꧂\nFN:${await HBWABotInc.getName(i)}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:꧁Herbert꧂\nFN:${await HBWABotInc.getName(i)}\nitem1.TEL;waid=${ownername}:${i}\nitem1.X-ABLabel:Click here to Chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	HBWABotInc.sendMessage(jid, { contacts: { displayName: `${list.length} contact`, contacts: list }, ...opts }, { quoted })

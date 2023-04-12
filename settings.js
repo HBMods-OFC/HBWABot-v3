@@ -3,8 +3,8 @@ const fs = require('fs')
 const chalk = require('chalk')
 
 //aumto functioner
-global.autoTyping = false //auto tying in gc (true to on, false to off)
-global.autoRecord = false //auto recording (true to on, false to off)
+global.autoTyping = true //auto tying in gc (true to on, false to off)
+global.autoRecord = true //auto recording (true to on, false to off)
 
 //documents variants
 global.doc1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -14,7 +14,7 @@ global.doc4 = 'application/zip'
 global.doc5 = 'application/pdf'
 global.doc6 = 'application/vnd.android.package-archive'
 
-//owmner v card
+//owner v card
 global.owner = ['918416093656'] 
 global.ownername = "Herbert Suantak"
 global.ytname = "HBMods Channel"
@@ -23,14 +23,14 @@ global.location = "India,Mizoram;Phuaibuang"
 
 //bot bomdy 
 global.ownernomer = "918416093656" //ur number
-global.premium = ['918416093656'] //ur premium number
+global.premium = ['918416093656','919378043489'] //ur premium number
 global.botname = 'HBWABot' //ur bot name
 global.linkz = "https://chat.whatsapp.com/C46rhzrso48Cq2rmIrR4Fj" //your theme url which will be displayed on whatsapp
 global.websitex = "https://youtube.com/@HBMods_Channel" //ur website to be displayed
 global.gbwa1 = "https://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1" //
 global.gbwa2 = "https://herbert70.blogspot.com/2022/12/app-name-gbwhatsapp-pro-version-17.html?m=1" //
 global.botscript = 'https://instagram.com/herbert_suantak2' //script link
-global.themeemoji = "🌚" //ur theme emoji
+global.themeemoji = "♕" //ur theme emoji
 global.packname = "Siamted by" //ur sticker watermark packname
 global.author = "HBWABot" //ur sticker watermark author
 global.wm = "HBWABot" //ur watermark
@@ -40,23 +40,23 @@ global.typemenu = 'templateImage' //
 global.typemenu2 = 'templateImage' ////type menu for downloadmenu, animemenu, etc
 // Other
 global.sessionName = 'session'
-global.prefa = ['','!','.','#','&']
+global.prefa = ['/','!','.','#','&']
 global.sp = ''
 
 //messages
 global.mess = {
-    success: 'Kha le!',
+    success: 'A hlawhtling e!',
     admin: 'He features hi chu admin te chauh hman thei tur a siam a ni!',
-    botAdmin: 'Admin min nih tir phaw la, chuan ka ti thei ang!',
-    premime: 'Hemi features premium ah ka dah bik hi i hman duh chuan Rent tiin rawn type rawh',
+    botAdmin: 'Admin min nih tir phawt la, chuan ka ti thei ang!',
+    premime: 'Hemi features, premium-ah ka dah bik hi i hman duh chuan owner rawn be rawh',
     owner: 'He features hi a neitu chauh hman thei tura siam a ni!',
-    group: 'Hei chu group ah chauh hman thei tura siam a ni!',
-    private: 'Hei chu private chat ah chauh hman thei tura siam a ni!',
+    group: 'Hei chu group-ah chauh hman thei tura siam a ni!',
+    private: 'Hei chu private chat-ah chauh hman thei tura siam a ni!',
     bot: 'Hei chu kei mah chauh hman thei tur a siam a ni',
     wait: '♲ Nghak lawk rawh..',
-    linkm: 'Khawnge a link🙄?',
-    endLimit: 'Vawiin ah i hman tur i hmang zo ta, darkar 12 ral hunah i hmang leh thei chauh ang',
-    nsfw: 'Nsfw features hi a neitu in a active loh a avngin a hman thei lo a, active turin a siam tu va hrilh rawh',
+    linkm: 'Khawnge a link?',
+    endLimit: 'Vawiinah i hman tur i hmang zo tawh, darkar 12 ral hunah i hmang leh thei chauh ang',
+    nsfw: 'Nsfw features hi a neitu in a activate loh a avangin a hman thei lo a, i hmang duh a nih chuan activate tir turin a siamtu va hriat tir rawh',
 }
 
 //media target
@@ -132,7 +132,6 @@ uncommon: '🎁',
 mythic: '🗳️',
 legendary: '🗃️',
 pet: '🎁',
-trash: '🗑',
 armor: '👕',
 sword: '⚔️',
 wood: '🪵',

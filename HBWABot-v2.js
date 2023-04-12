@@ -41,22 +41,22 @@ const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
 const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
 const time2 = moment().tz('Asia/Kolkata').format('HH:mm:ss')  
  if(time2 < "23:59:00"){
-var ucapanWaktu = `Good Night 🌌`
+var hunbi = `Muttui 🌌`
  }
- if(time2 < "19:00:00"){
-var ucapanWaktu = `Good Evening 🌃`
+ if(time2 < "17:00:00"){
+var hunbi = `Muttui 🌃`
  }
- if(time2 < "18:00:00"){
-var ucapanWaktu = `Good Evening 🌃`
+ if(time2 < "15:00:00"){
+var hunbi = `Tlai lam chibai 🌃`
  }
  if(time2 < "12:00:00"){
-var ucapanWaktu = `Good Afternoon 🌅`
+var hunbi = `Chawhnu lam chibai 🌅`
  }
  if(time2 < "11:00:00"){
-var ucapanWaktu = `Good Morning 🌄`
+var hunbi = `Tuk chhuah nuam 🌄`
  }
- if(time2 < "05:00:00"){
-var ucapanWaktu = `Good Morning 🌄`
+ if(time2 < "03:00:00"){
+var hunbi = `Tuk chhuah nuam 🌄`
  } 
  
 // read database game
@@ -83,18 +83,6 @@ let ntilinkytch =JSON.parse(fs.readFileSync('./database/antilinkytchannel.json')
 let ntilinkytvid =JSON.parse(fs.readFileSync('./database/antilinkytvideo.json'));
 let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'));
 let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
-
-//database virus and whatsapp bugs
-//warrrrrrrrr
-const { herbertvirtex } = require('./XBug/xeonvirtex')
-const { herbertbutton } = require('./XBug/xeonbutton')
-const { herbertbrutal } = require('./XBug/xeonbrutal')
-const { iphone } = require('./XBug/virtex/iphone')
-const { iphone5 } = require('./XBug/virtex/iphone5')
-const { herbertbutton2 } = require('./XBug/virtex/xeonbutton2')
-const { bugsw } = require('./XBug/virtex/bugsw')
-const xpicvirus = fs.readFileSync(`./XBug/xpicvirus.png`)
-//warrrrrrrrrr
 
 //database auto reply
 let herbertasticker = JSON.parse(fs.readFileSync('./HBMedia/theme/database/sticker.json'));
@@ -297,11 +285,11 @@ vawiinhitzat = `${dataa.value}`
 }
 
 //premium
-const prem1 = `Hi ${pushname} ${ucapanWaktu} \n\nHei hi premium member te chauh hman thei tura siam a ni,`
+const prem1 = `Hi ${pushname} ${hunbi} \n\nHei hi premium member te chauh hman thei tura siam a ni,`
 const prem2 = `Click the button below to buy premium`
 const prem3 = [{buttonId: `${prefix}buypreim`,buttonText: {displayText: `BUY PREMIUM`,},type: 1,},]
-blomdaftar = `${ucapanWaktu} @${sender.split("@")[0]} Kamu belum terdaftar di database cek private message mu untuk mendaftar`
-limitabis = `*[YOUR LIMIT IS EXPIRED]*\nBuy limit in ${prefix}buylimit or buy premium to get unlimited limit`
+blomdaftar = `${hunbi} @${sender.split("@")[0]} Database ah ila in register lo a, private message ah va check la va in resister rawh`
+limitabis = `*[I LIMITE A EXPIRED]*\nBuy limit in ${prefix}buylimit or buy premium to get unlimited limit`
 
 //WARRRRRRR
 const doc = { 
@@ -1036,7 +1024,7 @@ case 'coolcheck':
 case 'waifucheck':
 cantik = body.slice(1)
 const okebnh1 =['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
-const xeonkak = okebnh1[Math.floor(Math.random() * okebnh1.length)]
+const herbertstk = okebnh1[Math.floor(Math.random() * okebnh1.length)]
 HBWABotInc.sendMessage(m.chat, { text: herbertkak }, { quoted: m })
 break
             case 'linkgroup': case 'linkgc': case 'gclink': case 'grouplink': {
@@ -1263,8 +1251,8 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 let quality = args[1] ? args[1] : '128kbps'
                 let media = await yta(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
-                XeonBotInc.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
-                XeonBotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+                HBWABotInc.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
+                HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break
         case 'ytmp3':
@@ -1309,7 +1297,7 @@ case 'ytmp4': case 'ytvideo': {
             let ytslagu = require("youtube-yts")
             let lagusearch = await ytslagu(text)
             listSerch = []
-            teskd = `*${text}*\nHei he ta ka rawn dah khawm bik hi hla/mp3 an ni a, A hnuaia *H L A* tih khu hmet la i duh ber la chhuak rawh\n`
+            teskd = `*${text}*\nHe ta ka rawn dah khawm bik hi hla/mp3 an ni a, A hnuaia *H L A* tih khu hmet la i duh ber la chhuak rawh\n`
             for (let i of lagusearch.all) {
                 listSerch.push({
                     title: i.title,
@@ -1855,7 +1843,7 @@ const listMessage = {
   text: "Logo tih khu hmet rawh",
   footer: ``,
   title: `Hi 👋 ${pushname} \nCommand a tanga logo2 i siam chu he tah hian i duh ber i thlang chhuak thei ang`,
-  buttonText: "LOGO",
+  buttonText: "L O G O",
   sections
 }
 const sendMsg = await HBWABotInc.sendMessage(m.chat, listMessage)
@@ -1956,7 +1944,7 @@ break
             break
 	    case 'couplepp': case 'ppcouple': {
                 m.reply(mess.wait)
-                let anucpp = await fetchJson('https://raw.githubusercontent.com/DGXeon/Media/main/couple.json')
+                let anucpp = await fetchJson('https://raw.githubusercontent.com/HBMods-OFC/Media/main/couplepp/Inkawp.json')
                 let random = anucpp[Math.floor(Math.random() * anucpp.length)]
                 HBWABotInc.sendMessage(m.chat, { image: { url: random.male }, caption: `Mipa` }, { quoted: m })
                 HBWABotInc.sendMessage(m.chat, { image: { url: random.female }, caption: `Hmeichhia` }, { quoted: m })
@@ -4709,22 +4697,26 @@ case 'alive': case 'panel': case 'menu': case 'help': case '?': {
             let me = m.sender
             let timestampe = speed();
             let latensie = speed() - timestampe
-            	let lowq = `┌─❖
+            	let lowq = `
+▭▬▭▬▭▬▭▬▭▬▭▬▭ 
+ ▂▃▅▇▇♕H.♕.B♕▇▇▅▃▂ 
+▭▬▭▬▭▬▭▬▭▬▭▬▭
+┌─❖
 │ Hi 👋 
 └┬❖  ${pushname} 
-┌┤✑  ${ucapanWaktu} 😄
+┌┤✑  ${hunbi} 😄
 │└────────────┈ ⳹
 │
 └─ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊        
 │𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
 │𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : @${ini_mark.split('@')[0]}
+│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : *WhatsApp*
 │𝗕𝗼𝘁 : ${global.botname}
 │𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
-│𝗣𝗿𝗲𝗳𝗶𝘅 :  NO-PREFIX 
+│𝗣𝗿𝗲𝗳𝗶𝘅 :  Prifix hman kher a ngai lo vang
 │𝗠𝗼𝗱𝗲 : ${HBWABotInc.public ? 'Public' : `Self`}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : ${os.hostname()}
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : ${os.platform()}
+│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : *HBMods*
+│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : HB Mods/Dark tech Web
 │𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${cmdhitzat}
 │𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${vawiinhitzat}

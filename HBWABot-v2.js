@@ -1302,9 +1302,9 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
             case 'ytmp3':
 if (!args || !args[0]) throw 'Entirnan : *ytmp3 https://youtu.be/xpJ0R7iOKls*'
 if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
-XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
+HBWABotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
 const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
-await XeonBotInc.sendMessage(m.chat, {text: `*Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
+await HBWABotInc.sendMessage(m.chat, {text: `*Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
 if (!jsoni.status || !jsoni.data.url) throw `Download thei lo`
 let captiono = `*Y T - P L A Y*\n\n`
 captiono += `	◦  *Title* : ${jsoni.title}\n`
@@ -1314,7 +1314,7 @@ captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
 captiono += 'ZIMBOT'
 zimbotu =  `${jsoni.data.url}`
 
-XeonBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
+HBWABotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
 title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
 body:"SUB HBMods Channel",
 showAdAttribution: true,

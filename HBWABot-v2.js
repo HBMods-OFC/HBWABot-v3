@@ -1299,16 +1299,31 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break 
-            case 'ytmp3': case 'getmusic': case 'ytaudio': {
-                let { yta } = require('./lib/y2mate')
-                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls`
-                m.reply(mess.wait)
-                let quality = args[1] ? args[1] : '320'
-                let media = await yta(text, quality)
-                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
-                HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-            }
-            break        
+            case 'ytmp3':
+if (!args || !args[0]) throw 'Entirnan : *ytmp3 https://youtu.be/xpJ0R7iOKls*'
+if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
+XeonBotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
+const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
+await XeonBotInc.sendMessage(m.chat, {text: `*Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
+if (!jsoni.status || !jsoni.data.url) throw `Download thei lo`
+let captiono = `*Y T - P L A Y*\n\n`
+captiono += `	◦  *Title* : ${jsoni.title}\n`
+captiono += `	◦  *Size* : ${jsoni.data.size}\n`
+captiono += `	◦  *Duration* : ${jsoni.duration}\n`
+captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
+captiono += 'ZIMBOT'
+zimbotu =  `${jsoni.data.url}`
+
+XeonBotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
+title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
+body:"SUB HBMods Channel",
+showAdAttribution: true,
+mediaType:2,
+thumbnail: thumb,
+mediaUrl:`https://wa.me/918416/93656`, 
+sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
+}}, {quoted: m})
+break       
 case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate2')
                 if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls`

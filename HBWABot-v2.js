@@ -5390,7 +5390,6 @@ const buttonMessage = {
 │♕${prefix}dance
 │♕${prefix}cringe
 │♕${prefix}neko
-│♕${prefix}gura
 ╰─────────────✪`,
     footer: `${botname}`,
     buttons: buttons,
@@ -5460,26 +5459,11 @@ const buttons = [
 const buttonMessage = {
     image: unicorn,
     caption: `╭─────❰ *OTHER* 	
-│♕${prefix}afk
-│♕${prefix}id
 │♕${prefix}toqr [link]
-│♕${prefix}repeat
-│♕${prefix}readmore [text]
-│♕${prefix}toviewonce
-│♕${prefix}fliptext [text]] 
 │♕${prefix}alive
-│♕${prefix}script
-│♕${prefix}ping
-│♕${prefix}owner
+│♕${prefix}herbert
 │♕${prefix}menu
 │♕${prefix}delete
-│♕${prefix}chatinfo
-│♕${prefix}quoted
-│♕${prefix}listpc
-│♕${prefix}listgc
-│♕${prefix}donate
-│♕${prefix}request
-│♕${prefix}report [bug]
 ╰─────────────✪`,
     footer: `${botname}`,
     buttons: buttons,

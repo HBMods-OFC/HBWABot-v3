@@ -85,10 +85,10 @@ let bad = JSON.parse(fs.readFileSync('./src/toxic/bad.json'));
 let autorep =JSON.parse(fs.readFileSync('./database/autoreply.json'));
 
 //database auto reply
-let herbertasticker = JSON.parse(fs.readFileSync('./HBMedia/theme/database/sticker.json'));
-let herbertaaudio = JSON.parse(fs.readFileSync('./HBMedia/theme/database/audio.json'));
-let herbertaimage = JSON.parse(fs.readFileSync('./HBMedia/theme/database/image.json'));
-let herbertavideo = JSON.parse(fs.readFileSync('./HBMedia/theme/database/video.json'));
+let sticker = JSON.parse(fs.readFileSync('./HBMedia/theme/database/sticker.json'));
+let audio = JSON.parse(fs.readFileSync('./HBMedia/theme/database/audio.json'));
+let image = JSON.parse(fs.readFileSync('./HBMedia/theme/database/image.json'))
+let videox = JSON.parse(fs.readFileSync('./HBMedia/theme/database/video.json'))
 
 module.exports = HBWABotInc = async (HBWABotInc, m, chatUpdate, store) => {
     try {
@@ -696,7 +696,31 @@ if (isCreator) return m.reply(bvl)
 HBWABotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
 } else {
 }
-
+//auto reply
+for (let anji of sticker){
+				if (budy === anji){
+					result = fs.readFileSync(`./HBMedia/sticker/${anji}.webp`)
+					HBWABotInc.sendMessage(m.chat, { sticker: result }, { quoted: m })
+					}
+			}
+			for (let anju of audio){
+				if (budy === anju){
+					result = fs.readFileSync(`./HBMedia/audio/${anju}.mp3`)
+					HBWABotInc.sendMessage(m.chat, { audio: result, mimetype: 'audio/mp4', ptt: true }, { quoted: m })     
+					}
+			}
+			for (let anjh of image){
+				if (budy === anjh){
+					result = fs.readFileSync(`./HBMedia/image/${anjh}.jpg`)
+					HBWABotInc.sendMessage(m.chat, { image: result }, { quoted: m })
+					}
+			}
+					for (let anjh of videox){
+				if (budy === anjh){
+					result = fs.readFileSync(`./HBMedia/video/${anjh}.mp4`)
+					HBWABotInc.sendMessage(m.chat, { video: result }, { quoted: m })
+					}
+				  }
         // Mute Chat
       if (db.data.chats[m.chat].mute && !isAdmins && !isCreator) {
       return
@@ -1274,37 +1298,22 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 HBWABotInc.sendImage(m.chat, media.thumb, `${themeemoji} Title : ${media.title}\n${themeemoji} File Size : ${media.filesizeF}\n${themeemoji} Url : ${isUrl(text)}\n${themeemoji} Ext : MP3\n${themeemoji} Resolution : ${args[1] || '128kbps'}`, m)
                 HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
-            break
-        case 'ytmp3':
-if (!args || !args[0]) throw 'Entirnan : *ytmp3 https://youtu.be/xpJ0R7iOKls*'
-if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
-HBWABotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
-const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
-await HBWABotInc.sendMessage(m.chat, {text: `*Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
-if (!jsoni.status || !jsoni.data.url) throw `Download thei lo`
-let captiono = `*Y T - P L A Y*\n\n`
-captiono += `	◦  *Title* : ${jsoni.title}\n`
-captiono += `	◦  *Size* : ${jsoni.data.size}\n`
-captiono += `	◦  *Duration* : ${jsoni.duration}\n`
-captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
-captiono += 'ZIMBOT'
-zimbotu =  `${jsoni.data.url}`
-
-HBWABotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
-title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB HBMods Channel",
-showAdAttribution: true,
-mediaType:2,
-thumbnail: thumb,
-mediaUrl:`https://wa.me/918416/93656`, 
-sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
-}}, {quoted: m})
-break
+            break 
+            case 'ytmp3': case 'getmusic': case 'ytaudio': {
+                let { yta } = require('./lib/y2mate2')
+                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls`
+                m.reply(mess.wait)
+                let quality = args[1] ? args[1] : '320kbps'
+                let media = await yta(text, quality)
+                if (media.filesize >= 999999) return reply('File Over Limit '+util.format(media))
+                HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
+            }
+            break        
 case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate2')
-                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls 360p`
+                if (!text) throw `\n*Entir nan* : ${prefix + command} https://youtu.be/xpJ0R7iOKls`
                 m.reply(mess.wait)
-                let quality = args[1] ? args[1] : '720p'
+                let quality = args[1] ? args[1] : '360p'
                 let media = await ytv(text, quality)
                 if (media.filesize >= 100000) return m.reply('File Over Limit '+util.format(media))
                 HBWABotInc.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: `©Generated by HBWABot` }, { quoted: m })

@@ -4848,7 +4848,6 @@ case 'alive': case 'panel': case 'menu': case 'help': case '?': {
             let me = m.sender
             let timestampe = speed();
             let latensie = speed() - timestampe
- jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg')}, 
 const buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
 ]
 const buttonMessage = {

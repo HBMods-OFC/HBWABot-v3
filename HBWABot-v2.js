@@ -4850,7 +4850,9 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
             let latensie = speed() - timestampe
             let herbertezy = ``
             let ments = [ownernya, me, ini_mark]        
-            let buttons = [{ buttonId: 'herbert', buttonText: { displayText: 'A Neihtu Nb' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }]
+            let buttons = [
+  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, buttonId: 'command', buttonText: {displayText: 'Menu List'}, type: 1}
+]
             let buttonMessage = {
   jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
   fileName : `${wm}`,

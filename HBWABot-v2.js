@@ -4844,24 +4844,16 @@ const sendMsg = await HBWABotInc.sendMessage(m.chat, listMessage)
 }
 break 
 case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
-            let ownernya = ownernomer + '@s.whatsapp.net'
+var unicorn = await getBuffer(picak+'Button te khu\nhmet rawh')
+           
+             let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let timestampe = speed();
-            let latensie = speed() - timestampe
-            let herbertezy = ``
-            let ments = [ownernya, me, ini_mark]        
-            let buttons = [
-  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, buttonId: 'command', buttonText: {displayText: 'Menu List'}, type: 1}
-]
-            let buttonMessage = {
-  jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
-  fileName : `${wm}`,
-  mimetype: `${docs}`,
-  fileLength: '99999999999999',
-  pageCount: '1000000000',
-  caption: herbertezy,
-  footer: '
-┌─❖
+            let latensie = speed() - timestampe          
+const buttonMessage = {
+    image: unicorn,
+    caption: ``,
+    footer: `┌─❖
 │ Hi 👋 
 └┬❖  ${pushname} 
 ┌┤✑  ${hunbi} 😄
@@ -4883,29 +4875,21 @@ case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 └┬────────────┈ ⳹
    │✑  A hnuaia button 
    │✑  khu hmet rawh
-   └─────────────┈ ⳹',
-  buttons: buttons,
-  mentions: ments,
-  headerType: 4,
-  contextInfo:{externalAdReply:{
-  title: botname,
-  body: wm, 
-  showAdAttribution: true,
-  thumbnail: log0,
-  mediaType: 2,
-  mediaUrl: websitex,
-  sourceUrl: websitex
-  }}
-  }
-  HBWABotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
-  }
- break         
-      case 'ownermenu':{
+   └─────────────┈ ⳹`,
+   buttons: buttons,
+    headerType: 4
+}
+const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
+}
+break 
+            case 'groupmenu':{
+var unicorn = await getBuffer(picak+'A neihtu hman tur')
+
 const buttons = [
-  {buttonId: 'siamtu', buttonText: {displayText: 'Owner ??'}, type: 1}
+  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, type: 1}
 ]
 const buttonMessage = {
-jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
+    image: unicorn,
     caption: ``,
     footer: `╭─────❰ *A Neihtu* 	
 │♕${prefix}self
@@ -4923,8 +4907,8 @@ jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
 }
 const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
 }
-break
-            case 'groupmenu':{
+break 
+case 'groupmenu':{
 var unicorn = await getBuffer(picak+'Group-ah hman tur')
 
 const buttons = [

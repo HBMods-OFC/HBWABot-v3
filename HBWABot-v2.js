@@ -1901,7 +1901,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*A Hman Dan Tur Step by Step in*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*A Hman Dan Tur Step by Step in*
     
 *1. I WhatsApp settings ah lut la*
 *2. Chats tiah khan lut la*
@@ -1914,7 +1915,6 @@ const buttonMessage = {
 
 
 *He mi step by step a ka rawn dah hi ila hrethiam chiang lo a nih chuan, a hnuaia Button khu hmet rawh*`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -4846,7 +4846,7 @@ break
 case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 var unicorn = await getBuffer(picak+'Button te khu\nhmet rawh')
 const buttons = [
-  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, buttonId: 'command', buttonText: {displayText: 'List Menu'}, type: 1}
+  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, buttonId: 'command', buttonText: {displayText: 'List Menu'}, type: 2}
 ]           
              let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
@@ -4908,7 +4908,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *GROUP* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *GROUP* 	
 │♕${prefix}grouplink
 │♕${prefix}setgcpp [image]
 │♕${prefix}setname [text]
@@ -4926,7 +4927,6 @@ const buttonMessage = {
 │♕${prefix}checkvote
 │♕${prefix}delvote
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -4968,9 +4968,9 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*FMWhatsApp*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*FMWhatsApp*
 https://herbert70.blogspot.com/2022/10/fmwhatsapp.html`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5010,9 +5010,9 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*GBWhatsApp*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*GBWhatsApp*
 https://herbert70.blogspot.com/2022/04/download-gbwhatsapp-last-version-update.html?m=1`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5027,9 +5027,9 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*GBWhatsApp Pro*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*GBWhatsApp Pro*
 https://herbert70.blogspot.com/2022/12/app-name-gbwhatsapp-pro-version-17.html?m=1`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5044,9 +5044,9 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*OGWhatsApp*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*OGWhatsApp*
  https://herbert70.blogspot.com/2022/12/ogwhatsapp.html?m=1`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5061,9 +5061,9 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `*YOWhatsApp*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `*YOWhatsApp*
 https://herbert70.blogspot.com/2022/10/yowhatsapp.html`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5078,11 +5078,11 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ Text Thlalak 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ Text Thlalak 	
 │♕${prefix}logo [your text]
 │♕${prefix}logo2 [your|text,]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5097,7 +5097,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *DOWNLOAD* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *DOWNLOAD* 	
 │♕${prefix}tiktok [url]
 │♕${prefix}tiktokaudio [url]
 │♕${prefix}instagram [url]
@@ -5107,7 +5108,6 @@ const buttonMessage = {
 │♕${prefix}ytmp3 [url|quality]
 │♕${prefix}gitclone [repo link]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5122,7 +5122,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *SEARCH* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *SEARCH* 	
 │♕${prefix}play [query]
 │♕${prefix}song [query]
 │♕${prefix}yts [query]
@@ -5135,7 +5136,6 @@ const buttonMessage = {
 │♕${prefix}horoscope [query]
 │♕${prefix}ringtone [query]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5150,7 +5150,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *CONVERT* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *CONVERT* 	
 │♕${prefix}toimage [reply stick]
 │♕${prefix}sticker [reply img|gif]
 │♕${prefix}emoji [emoji]
@@ -5174,7 +5175,6 @@ const buttonMessage = {
 │♕${prefix}smooth [reply aud]
 │♕${prefix}squirrel [reply aud]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5189,7 +5189,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *RANDOM IMG* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *RANDOM IMG* 	
 │♕${prefix}chinese
 │♕${prefix}japanese
 │♕${prefix}korean
@@ -5197,7 +5198,6 @@ const buttonMessage = {
 │♕${prefix}thai
 │♕${prefix}vietnamese
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5212,7 +5212,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *RANDOM VIDEO*
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *RANDOM VIDEO*
 │♕${prefix}tiktokgirl	
 │♕${prefix}tiktoknukhty
 │♕${prefix}tiktokpanrika
@@ -5222,7 +5223,6 @@ const buttonMessage = {
 │♕${prefix}tiktoksantuy
 │♕${prefix}tiktokbocil
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5237,7 +5237,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *EMOTE* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *EMOTE* 	
 │♕${prefix}instagramemoji
 │♕${prefix}facebookemoji
 │♕${prefix}iphoneemoji
@@ -5251,7 +5252,6 @@ const buttonMessage = {
 │♕${prefix}pediaemoji
 │♕${prefix}microsoftemoji
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5266,7 +5266,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *ANIME* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *ANIME* 	
 │♕${prefix}animeneko
 │♕${prefix}waifu
 │♕${prefix}shinobu
@@ -5319,7 +5320,6 @@ const buttonMessage = {
 │♕${prefix}animewall [query]
 │♕${prefix}animewall2 [query]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5334,7 +5334,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *STICKER* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *STICKER* 	
 │♕${prefix}emoji
 │♕${prefix}emojimix
 │♕${prefix}lovesticker
@@ -5342,7 +5343,6 @@ const buttonMessage = {
 │♕${prefix}spongebob
 │♕${prefix}gojosatoru
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5357,7 +5357,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *ANIME STICKER* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *ANIME STICKER* 	
 │♕${prefix}loli
 │♕${prefix}bully
 │♕${prefix}cuddle
@@ -5387,7 +5388,6 @@ const buttonMessage = {
 │♕${prefix}cringe
 │♕${prefix}neko
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5402,7 +5402,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *NSFW* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *NSFW* 	
 │♕${prefix}gifhentai
 │♕${prefix}gifblowjob
 │♕${prefix}hentaivideo
@@ -5439,7 +5440,6 @@ const buttonMessage = {
 │♕${prefix}yuri
 │♕${prefix}zettai
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }
@@ -5454,14 +5454,14 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: `╭─────❰ *OTHER* 	
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *OTHER* 	
 │♕${prefix}toqr [link]
 │♕${prefix}alive
 │♕${prefix}herbert
 │♕${prefix}menu
 │♕${prefix}delete
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }

@@ -4854,7 +4854,7 @@ const buttons = [
             let latensie = speed() - timestampe          
 const buttonMessage = {
     image: unicorn,
-    caption: ``,
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▬▭`,
     footer: `┌─❖
 │ Hi 👋 
 └┬❖  ${pushname} 
@@ -4892,18 +4892,8 @@ const buttons = [
 ]
 const buttonMessage = {
     image: unicorn,
-    caption: ``,
-    footer: `╭─────❰ *A Neihtu* 	
-│♕${prefix}self
-│♕${prefix}public
-│♕${prefix}join [link]
-│♕${prefix}leavegc
-│♕${prefix}block [user]
-│♕${prefix}unblock [user]
-│♕${prefix}broadcast [text]
-│♕${prefix}setppbot [image]
-│♕${prefix}setthumb [reply img]
-╰─────────────✪`,
+    caption: `▬▭▬▭▬▭▬▭▬▭▬▭▬▭`,
+    footer: `╭─────❰ *A Neihtu*\n│♕${prefix}self\n│♕${prefix}public\n│♕${prefix}join [link]\n│♕${prefix}leavegc\n│♕${prefix}block [user]\n│♕${prefix}unblock [user]\n│♕${prefix}broadcast [text]\n│♕${prefix}setppbot [image]\n│♕${prefix}setthumb [reply img]\n╰─────────────✪`,
     buttons: buttons,
     headerType: 4
 }

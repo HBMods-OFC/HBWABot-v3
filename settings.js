@@ -61,7 +61,7 @@ global.mess = {
 
 //media target
 global.thum = fs.readFileSync("./HBMedia/theme/hbwabot.jpg") //ur thumb pic
-global.log0 = fs.readFileSync("./HBMedia/theme/hbwabot.jpg") //ur logo pic
+global.log0 = fs.readFileSync("./HBMedia/theme/HBWABot2.jpg") //ur logo pic
 global.err4r = fs.readFileSync("./HBMedia/theme/hbwabot.jpg") //ur error pic
 global.thumb = fs.readFileSync("./HBMedia/theme/hbwabot.jpg") //ur thumb pic
 

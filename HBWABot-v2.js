@@ -4736,42 +4736,6 @@ break
 case 'tqtt': 
 throw `He script kan siam theihna chhan chu *Xeon* a leh *Herbert-a* vang liau liau a ni a, an chungah ka lawm hle a ni!!!`
 break
-case 'alive': case 'panel': case 'menu': case 'help': case '?': {
-            	let ownernya = ownernomer + '@s.whatsapp.net'
-            let me = m.sender
-            let timestampe = speed();
-            let latensie = speed() - timestampe
-            	let lowq = `
-▭▬▭▬▭▬▭▬▭▬▭▬▭ 
- ▂▃▅▇▇♕H.♕.B♕▇▇▅▃▂ 
-▭▬▭▬▭▬▭▬▭▬▭▬▭
-┌─❖
-│ Hi 👋 
-└┬❖  ${pushname} 
-┌┤✑  ${hunbi} 😄
-│└────────────┈ ⳹
-│
-└─ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊        
-│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
-│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
-│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : *WhatsApp*
-│𝗕𝗼𝘁 : ${global.botname}
-│𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
-│𝗣𝗿𝗲𝗳𝗶𝘅 :  Prifix hman kher a ngai lo vang
-│𝗠𝗼𝗱𝗲 : ${HBWABotInc.public ? 'Public' : `Self`}
-│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : *HBMods*
-│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : HB Mods/Dark tech Web
-│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${cmdhitzat}
-│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${vawiinhitzat}
-└┬────────────┈ ⳹
-   │✑  A hnuaia button 
-   │✑  khu hmet rawh
-   └─────────────┈ ⳹`
-                let buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
-                await HBWABotInc.sendButtonText(m.chat, buttons, lowq, botname, m, {quoted: fkontak})
-            	}
-            break 
             case 'command': {
 	const sections = [{
 								"title": "Bot features hmasa ber",
@@ -4878,15 +4842,57 @@ const listMessage = {
 }
 const sendMsg = await HBWABotInc.sendMessage(m.chat, listMessage)
 }
-break            
+break 
+case 'alive': case 'panel': case 'menu': case 'help': case '?': {
+          	let ownernya = ownernomer + '@s.whatsapp.net'
+            let me = m.sender
+            let timestampe = speed();
+            let latensie = speed() - timestampe
+ jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg')}, 
+const buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
+]
+const buttonMessage = {
+    image: log0,
+    caption: ``,
+    footer: `           
+┌─❖
+│ Hi 👋 
+└┬❖  ${pushname} 
+┌┤✑  ${hunbi} 😄
+│└────────────┈ ⳹
+│
+└─ 𝘽𝙊𝙏 𝙄𝙉𝙁𝙊        
+│𝗦𝗽𝗲𝗲𝗱 : ${latensie.toFixed(4)} miliseconds
+│𝗥𝘂𝗻𝘁𝗶𝗺𝗲 : ${runtime(process.uptime())}
+│𝗣𝗼𝘄𝗲𝗿𝗲𝗱 : *WhatsApp*
+│𝗕𝗼𝘁 : ${global.botname}
+│𝗢𝘄𝗻𝗲𝗿 : @${ownernya.split('@')[0]}
+│𝗣𝗿𝗲𝗳𝗶𝘅 :  Prifix hman kher a ngai lo vang
+│𝗠𝗼𝗱𝗲 : ${HBWABotInc.public ? 'Public' : `Self`}
+│𝗛𝗼𝘀𝘁 𝗡𝗮𝗺𝗲 : *HBMods*
+│𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 : HB Mods/Dark tech Web
+│𝗧𝗼𝘁𝗮𝗹 𝗨𝘀𝗲𝗿 : ${Object.keys(global.db.data.users).length}
+│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 : ${cmdhitzat}
+│𝗧𝗼𝘁𝗮𝗹 𝗛𝗶𝘁 𝗧𝗼𝗱𝗮𝘆 : ${vawiinhitzat}
+└┬────────────┈ ⳹
+   │✑  A hnuaia button 
+   │✑  khu hmet rawh
+   └─────────────┈ ⳹`,
+    buttons: buttons,
+    headerType: 4
+} 
+const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
+} 
+break         
       case 'ownermenu':{
-	   var unicorn = await getBuffer(picak+'A neihtu hman tur')
+	  jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg')}, 
 const buttons = [
   {buttonId: 'siamtu', buttonText: {displayText: 'Owner ??'}, type: 1}
 ]
 const buttonMessage = {
-    image: unicorn,
-    caption: `╭─────❰ *A Neihtu* 	
+    image: log0,
+    caption: ``,
+    footer: `╭─────❰ *A Neihtu* 	
 │♕${prefix}self
 │♕${prefix}public
 │♕${prefix}join [link]
@@ -4897,7 +4903,6 @@ const buttonMessage = {
 │♕${prefix}setppbot [image]
 │♕${prefix}setthumb [reply img]
 ╰─────────────✪`,
-    footer: `${botname}`,
     buttons: buttons,
     headerType: 4
 }

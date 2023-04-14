@@ -4849,7 +4849,6 @@ case 'alive': case 'panel': case 'menu': case 'help': case '?': {
             let timestampe = speed();
             let latensie = speed() - timestampe
 const buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
-]
 const buttonMessage = {
     image: log0,
     caption: ``,
@@ -4884,7 +4883,6 @@ const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
 } 
 break         
       case 'ownermenu':{
-	  jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg')}, 
 const buttons = [
   {buttonId: 'siamtu', buttonText: {displayText: 'Owner ??'}, type: 1}
 ]

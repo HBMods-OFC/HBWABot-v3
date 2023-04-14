@@ -4843,16 +4843,22 @@ const listMessage = {
 const sendMsg = await HBWABotInc.sendMessage(m.chat, listMessage)
 }
 break 
-case 'alive': case 'panel': case 'menu': case 'help': case '?': {
-          	let ownernya = ownernomer + '@s.whatsapp.net'
+case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
+            let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let timestampe = speed();
             let latensie = speed() - timestampe
-const buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
-const buttonMessage = {
-jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
-    caption: ``,
-    footer: `           
+            let herbertezy = ``
+            let ments = [ownernya, me, ini_mark]        
+            let buttons = [{ buttonId: 'herbert', buttonText: { displayText: 'A Neihtu Nb' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }]
+            let buttonMessage = {
+  jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
+  fileName : `${wm}`,
+  mimetype: `${docs}`,
+  fileLength: '99999999999999',
+  pageCount: '1000000000',
+  caption: herbertezy,
+  footer: '
 ┌─❖
 │ Hi 👋 
 └┬❖  ${pushname} 
@@ -4875,13 +4881,23 @@ jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
 └┬────────────┈ ⳹
    │✑  A hnuaia button 
    │✑  khu hmet rawh
-   └─────────────┈ ⳹`,
-    buttons: buttons,
-    headerType: 4
-} 
-const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
-} 
-break         
+   └─────────────┈ ⳹',
+  buttons: buttons,
+  mentions: ments,
+  headerType: 4,
+  contextInfo:{externalAdReply:{
+  title: botname,
+  body: wm, 
+  showAdAttribution: true,
+  thumbnail: log0,
+  mediaType: 2,
+  mediaUrl: websitex,
+  sourceUrl: websitex
+  }}
+  }
+  HBWABotInc.sendMessage(m.chat, buttonMessage, {quoted: fkontak})
+  }
+ break         
       case 'ownermenu':{
 const buttons = [
   {buttonId: 'siamtu', buttonText: {displayText: 'Owner ??'}, type: 1}

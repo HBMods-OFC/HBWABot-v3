@@ -4850,7 +4850,7 @@ case 'alive': case 'panel': case 'menu': case 'help': case '?': {
             let latensie = speed() - timestampe
 const buttons = [{ buttonId: 'siamtu', buttonText: { displayText: 'Herbert' }, type: 1 },{ buttonId: 'command', buttonText: { displayText: 'List Menu' }, type: 1 }]
 const buttonMessage = {
-    image: log0,
+jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
     caption: ``,
     footer: `           
 ┌─❖
@@ -4887,7 +4887,7 @@ const buttons = [
   {buttonId: 'siamtu', buttonText: {displayText: 'Owner ??'}, type: 1}
 ]
 const buttonMessage = {
-    image: log0,
+jpegThumbnail: fs.readFileSync('./HBMedia/theme/HBWABot2.jpg'),
     caption: ``,
     footer: `╭─────❰ *A Neihtu* 	
 │♕${prefix}self

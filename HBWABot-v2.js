@@ -4845,7 +4845,9 @@ const sendMsg = await HBWABotInc.sendMessage(m.chat, listMessage)
 break 
 case 'alive': case 'panel': case 'list': case 'menu': case 'help': case '?': {
 var unicorn = await getBuffer(picak+'Button te khu\nhmet rawh')
-           
+const buttons = [
+  {buttonId: 'siamtu', buttonText: {displayText: 'A Neihtu Nb.'}, buttonId: 'command', buttonText: {displayText: 'List Menu'}, type: 1}
+]           
              let ownernya = ownernomer + '@s.whatsapp.net'
             let me = m.sender
             let timestampe = speed();
@@ -4882,7 +4884,7 @@ const buttonMessage = {
 const sendMsg = await HBWABotInc.sendMessage(m.chat, buttonMessage)
 }
 break 
-            case 'groupmenu':{
+            case 'ownermenu':{
 var unicorn = await getBuffer(picak+'A neihtu hman tur')
 
 const buttons = [

@@ -14,4 +14,6 @@ RUN npm install
 
 COPY . .
 
-CMD ["node", "."]
+EXPOSE 300
+
+CMD ["node","index.js","--server"]

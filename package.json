@@ -1,11 +1,33 @@
 {
-  "name": "HBWABot",
-  "version": "6.0.0",
-  "description": "Automated whatsapp md bot created using nodejs and baileys lib",
-  "type": "commonjs",
-  "scripts": {
-    "start": "npm i -g pm2 && pm2 start index.js && pm2 save && pm2 logs"
-  },
+  "name": "GURU",
+
+    "version": "0.0.1",
+
+    "description": "Customizable WhatsApp Bot",
+
+    "main": "index.js",
+
+    "type": "module",
+
+    "directories": {
+
+        "lib": "lib",
+
+        "src": "src",
+
+        "plugins": "plugins"
+
+    },
+
+    "scripts": {
+
+        "start": "node index.js",
+
+        "test": "node test.js",
+
+        "test2": "nodemon index.js"
+
+    },
   "keywords": [
     "termux",
     "whatsapp",

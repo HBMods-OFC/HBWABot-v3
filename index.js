@@ -1,7 +1,7 @@
 
 require('./settings')
 const { default: HBWABotIncConnect, useSingleFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto } = require("@adiwajshing/baileys")
-
+const { state, saveState } = useSingleFileAuthState(`${sessionName}.json`)
 const pino = require('pino')
 const { Boom } = require('@hapi/boom')
 const fs = require('fs')
@@ -159,19 +159,97 @@ let docs = pickRandom(documents)
                 //welcome\\
         let nama = await HBWABotInc.getName(num)
 memb = metadata.participants.length
-
-Kon = await getBuffer(`https://imgur.com/GBRIWii.gif`)
-
-Tol = await getBuffer(`https://imgur.com/GBRIWii.gif`)
+XeonWlcm = await getBuffer(ppuser)
+XeonLft = await getBuffer(ppuser)
                 if (anu.action == 'add') {
-                    HBWABotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `Hi @${num.split("@")[0]}, Kan group-ah hian kan lo lawm a che` })
+                const xeonbuffer = await getBuffer(ppuser)
+                let xeonName = num
+                const xtime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	            const xdate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+	            const xmembers = metadata.participants.length
+                let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "918416093656-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: XeonWlcm, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                xeonbody = `┌─❖
+│「 𝗛𝗶 👋 」
+└┬❖ 「 @${xeonName.split("@")[0]}  」
+   │✑  𝗪𝗲𝗹𝗰𝗼𝗺𝗲 𝘁𝗼 
+   │✑  ${metadata.subject}
+   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
+   │✑ ${xmembers}th
+   │✑  𝗝𝗼𝗶𝗻𝗲𝗱 : 
+   │✑ ${xtime} ${xdate}
+   └───────────────┈ ⳹`
+let buttons = [
+{buttonId: `wkwwk`, buttonText: {displayText: 'Welcome 💐'}, type: 1}
+]
+let buttonMessage = {
+document: fs.readFileSync('./HBMedia/theme/cheems.xlsx'),
+mimetype: docs,
+jpegThumbnail:XeonWlcm,
+mentions: [num],
+fileName: `${metadata.subject}`,
+fileLength: 99999999999999,
+caption: xeonbody,
+footer: `${botname}`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${pushname}`,
+body: `Description hi chhiar hmaih suh`,
+mediaType:2,
+thumbnail: XeonWlcm,
+sourceUrl: `${websitex}`,
+mediaUrl: `${websitex}`
+}}
+}
+HBWABotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+                } else if (anu.action == 'remove') {
+                	const xeonbuffer = await getBuffer(ppuser)
+                    const xeontime = moment.tz('Asia/Kolkata').format('HH:mm:ss')
+	                const xeondate = moment.tz('Asia/Kolkata').format('DD/MM/YYYY')
+                	let xeonName = num
+                    const xeonmembers = metadata.participants.length
+                    let unicorndoc = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "918416093656-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: xeonbuffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    xeonbody = `┌─❖
+│「 𝗚𝗼𝗼𝗱𝗯𝘆𝗲 👋 」
+└┬❖ 「 @${xeonName.split("@")[0]}  」
+   │✑  𝗟𝗲𝗳𝘁 
+   │✑ ${metadata.subject}
+   │✑  𝗠𝗲𝗺𝗯𝗲𝗿 : 
+   │✑ ${xeonmembers}th
+   │✑  𝗧𝗶𝗺𝗲 : 
+   │✑  ${xeontime} ${xeondate}
+   └───────────────┈ ⳹`
+let buttons = [
+{buttonId: `wkwkwk`, buttonText: {displayText: 'Mangtha🥀'}, type: 1}
+]
+let buttonMessage = {
+document: fs.readFileSync('./HBMedia/theme/cheems.xlsx'),
+mimetype: docs,
+jpegThumbnail:XeonLft,
+mentions: [num],
+fileName: `${metadata.subject}`,
+fileLength: 99999999999999,
+caption: xeonbody,
+footer: `herbert70.blogspot.com`,
+buttons: buttons,
+headerType: 4,
+contextInfo:{externalAdReply:{
+title: `${pushname}`,
+body: `Bye! lo in enkawl tha ang che`,
+mediaType:2,
+thumbnail: XeonLft,
+sourceUrl: `${websitex}`,
+mediaUrl: `${websitex}`
+}}
+}
+HBWABotInc.sendMessage(anu.id, buttonMessage, {quoted:unicorndoc})
+                             
                 }
             }
-        } catch (err) {
-            console.log(err)
+        } catch (e) {
+            console.log(e)
         }
     })
-    
     // Setting
     HBWABotInc.decodeJid = (jid) => {
         if (!jid) return jid
@@ -211,7 +289,7 @@ Tol = await getBuffer(`https://imgur.com/GBRIWii.gif`)
 	for (let i of kon) {
 	    list.push({
 	    	displayName: await HBWABotInc.getName(i),
-	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
+	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:꧁Herbert꧂\nFN:${await HBWABotInc.getName(i)}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click here to chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
 	HBWABotInc.sendMessage(jid, { contacts: { displayName: `${list.length} contact`, contacts: list }, ...opts }, { quoted })

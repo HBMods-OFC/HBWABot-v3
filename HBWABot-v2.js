@@ -60,9 +60,48 @@ var hunbi = `Tuk chhuah nuam 🌄`
  } 
  
 // read database game
-let tebaklagu = db.data.game.tebaklagu = []
-let kuismath = db.data.game.math = []
-let vote = db.data.others.vote = []
+global.DATABASE = global.db // Backwards Compatibility
+global.loadDatabase = async function loadDatabase() {
+  if (global.db.READ) return new Promise((resolve) => setInterval(function () { (!global.db.READ ? (clearInterval(this), resolve(global.db.data == null ? global.loadDatabase() : global.db.data)) : null) }, 1 * 1000))
+  if (global.db.data !== null) return
+  global.db.READ = true
+  await global.db.read()
+  global.db.READ = false
+  global.db.data = {
+    users: {},
+    chats: {},
+    database: {},
+    game: {},
+    settings: {},
+    others: {},
+    sticker: {},
+    ...(global.db.data || {})
+  }
+  global.db.chain = _.chain(global.db.data)
+}
+loadDatabase()
+global.db = JSON.parse(fs.readFileSync('./src/database.json'))
+if (global.db) global.db = {
+    sticker: {},
+    database: {},
+    game: {},
+    others: {},
+    users: {},
+    ...(global.db || {})
+}
+
+let lolkey = global.lolhuman
+let tebaklagu = db.game.tebaklagu = []
+let _family100 = db.game.family100 = []
+let kuismath = db.game.math = []
+let tebakgambar = db.game.tebakgambar = []
+let tebakkata = db.game.tebakkata = []
+let caklontong = db.game.lontong = []
+let caklontong_desk = db.game.lontong_desk = []
+let tebakkalimat = db.game.kalimat = []
+let tebaklirik = db.game.lirik = []
+let tebaktebakan = db.game.tebakan = []
+let vote = db.others.vote = []
 
 //read database jid
 let premium = JSON.parse(fs.readFileSync('./database/user/premium.json'));

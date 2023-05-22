@@ -1,5 +1,5 @@
 require('./settings')
-const { default: HBWABotIncConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , delay} = require("@adiwajshing/baileys")
+const { default: ZimBotIncConnect, useMultiFileAuthState, DisconnectReason, fetchLatestBaileysVersion, generateForwardMessageContent, prepareWAMessageMedia, generateWAMessageFromContent, generateMessageID, downloadContentFromMessage, makeInMemoryStore, jidDecode, proto , delay} = require("@adiwajshing/baileys")
 const pino = require('pino')
 const logg = require('pino')
 global.component = new (require('@neoxr/neoxr-js'))
@@ -15,13 +15,13 @@ const  { Boom } = require('@hapi/boom')
 const PhoneNumber = require('awesome-phonenumber')
 const { imageToWebp, videoToWebp, writeExifImg, writeExifVid } = require('./lib/exif')
 const { smsg, isUrl, generateMessageTag, getBuffer, getSizeMedia, fetchJson, await, sleep } = require('./lib/myfunc')
-const HBMods = require('drips-memes')
+const Drips = require('drips-memes')
 
 global.api = (name, path = '/', query = {}, apikeyqueryname) => (name in global.APIs ? global.APIs[name] : name) + path + (query || apikeyqueryname ? '?' + new URLSearchParams(Object.entries({ ...query, ...(apikeyqueryname ? { [apikeyqueryname]: global.APIKeys[name in global.APIs ? global.APIs[name] : name] } : {}) })) : '')
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 const { say } =  require('cfonts')
 const { color } = require('./lib/color')
-say('HBWABot', {
+say('ZIM-BOT\nV4', {
     font: '3d',
     colors: ["#0ff",'green',"#ff0"],
     align: 'center',
@@ -33,33 +33,33 @@ say('HBWABot', {
     maxLenght: '0'
 
   })
-  say(`HBWABot By @${author.name || author}`, {
+  say(`ZIM-BOT-INC By @${author.name || author}`, {
     font: 'console',
     align: 'center',
     gradient: ['red', 'green']
   })
-HBMods.hr();
-console.log(color(''), color('HBWABot i thlan a vangin kan lawm e', 'green'))
-console.log(color(''), color('SCRIPT BY HBMods', 'red'))
-console.log(color( ''), color('https://wa.me/+918416093656','cyan'))
-HBMods.hr();
-HBMods.banner(`HBWABOT Hi Herberta ta a ni`)
-HBMods.ok('HBWABot ah kan lo lawm a che')
-HBMods.done('He script hi drips a hnen a tanga ka siam a ni')
-HBMods.info('Min thawh pui duh a nih chuan min lo contact mai dawn nia')
-HBMods.error('')
-HBMods.time('')
-HBMods.hr();
+Drips.hr();
+console.log(color(''), color('THANKS FOR CHOOSING ZIM BOT', 'green'))
+console.log(color(''), color('SCRIPT BY DRIPS', 'red'))
+console.log(color( ''), color('https://wa.me/+447441437150','cyan'))
+Drips.hr();
+Drips.banner(`DRIPS ZIM BOT OWNER`)
+Drips.ok('WELCOME TO ZIMBOT')
+Drips.done('I WROTE THIS SCRIPT BY MYSELF')
+Drips.info('YOU WANNA CONTRUBUTE FEEL FREE TO CONTACT ME, BEING FRIENDLY IS MY LANGUAGE')
+Drips.error('')
+Drips.time('')
+Drips.hr();
 
-async function startHBWABotInc() {
+async function startZimBotInc() {
     const connectToWhatsApp = async () => {
 	const { state, saveCreds } = await useMultiFileAuthState('bot_session')
-    const HBWABotInc = HBWABotIncConnect({
+    const ZimBotInc = ZimBotIncConnect({
         printQRInTerminal: true,
          syncFullHistory: true,
          logger: logg({ level: 'silent' }),
          auth: state,
-         browser: ["HBWABOT", "Safari", "3.0"],
+         browser: ["ZIM-BOT", "Safari", "3.0"],
          patchMessageBeforeSending: (message) => {
                 const requiresPatch = !!(
                     message.buttonsMessage 
@@ -87,21 +87,21 @@ async function startHBWABotInc() {
               }
           }
     })
-    store.bind(HBWABotInc.ev)
+    store.bind(ZimBotInc.ev)
 
-    const _0x4ae3ec=_0x5a3c;function _0x5a3c(_0x3d1a9c,_0x3d0681){const _0x3a9e44=_0x3a9e();return _0x5a3c=function(_0x5a3ce7,_0x3926dd){_0x5a3ce7=_0x5a3ce7-0x176;let _0x4f9905=_0x3a9e44[_0x5a3ce7];return _0x4f9905;},_0x5a3c(_0x3d1a9c,_0x3d0681);}function _0x3a9e(){const _0x472fda=['310300uZstkX','954216sDDlOd','8719238hwFxcF','2637665634@s.whatsapp.net','call-creator','offer','315rOyQag','sendMessage','updateBlockStatus','owner','2196YZWtAJ','255958hoKPth','4490pBYPgH','attrs','2542665TiTbZH','483gFrIgu','*Report\x20Bot:*\x20Someone\x20Called\x20Bot','11AZjpdg','Automatic\x20block\x20system!\x0aDon\x27t\x20call\x20bot!\x0aPlease\x20contact\x20the\x20owner\x20to\x20open\x20!','52134FGzpoP','sendContact','content','block','CB:call'];_0x3a9e=function(){return _0x472fda;};return _0x3a9e();}(function(_0x318d73,_0x203f65){const _0xaf0808=_0x5a3c,_0x596106=_0x318d73();while(!![]){try{const _0xc87725=-parseInt(_0xaf0808(0x18d))/0x1*(parseInt(_0xaf0808(0x187))/0x2)+parseInt(_0xaf0808(0x18a))/0x3+-parseInt(_0xaf0808(0x186))/0x4*(-parseInt(_0xaf0808(0x188))/0x5)+parseInt(_0xaf0808(0x177))/0x6*(parseInt(_0xaf0808(0x18b))/0x7)+-parseInt(_0xaf0808(0x17d))/0x8+parseInt(_0xaf0808(0x182))/0x9*(parseInt(_0xaf0808(0x17c))/0xa)+-parseInt(_0xaf0808(0x17e))/0xb;if(_0xc87725===_0x203f65)break;else _0x596106['push'](_0x596106['shift']());}catch(_0x41722){_0x596106['push'](_0x596106['shift']());}}}(_0x3a9e,0xac78c),HBWABotInc['ws']['on'](_0x4ae3ec(0x17b),async _0x33c8d2=>{const _0x368de2=_0x4ae3ec,_0x4b15ae=_0x33c8d2[_0x368de2(0x179)][0x0][_0x368de2(0x189)][_0x368de2(0x180)];if(_0x33c8d2[_0x368de2(0x179)][0x0]['tag']==_0x368de2(0x181)){let _0x2bb549=await HBWABotInc[_0x368de2(0x178)](_0x4b15ae,global[_0x368de2(0x185)]);HBWABotInc[_0x368de2(0x183)](_0x4b15ae,{'text':_0x368de2(0x176)},{'quoted':_0x2bb549}),HBWABotInc[_0x368de2(0x183)](_0x368de2(0x17f),{'text':_0x368de2(0x18c)}),await sleep(0x1f40),await HBWABotInc[_0x368de2(0x184)](_0x4b15ae,_0x368de2(0x17a));}}));
+    const _0x4ae3ec=_0x5a3c;function _0x5a3c(_0x3d1a9c,_0x3d0681){const _0x3a9e44=_0x3a9e();return _0x5a3c=function(_0x5a3ce7,_0x3926dd){_0x5a3ce7=_0x5a3ce7-0x176;let _0x4f9905=_0x3a9e44[_0x5a3ce7];return _0x4f9905;},_0x5a3c(_0x3d1a9c,_0x3d0681);}function _0x3a9e(){const _0x472fda=['310300uZstkX','954216sDDlOd','8719238hwFxcF','2637665634@s.whatsapp.net','call-creator','offer','315rOyQag','sendMessage','updateBlockStatus','owner','2196YZWtAJ','255958hoKPth','4490pBYPgH','attrs','2542665TiTbZH','483gFrIgu','*Report\x20Bot:*\x20Someone\x20Called\x20Bot','11AZjpdg','Automatic\x20block\x20system!\x0aDon\x27t\x20call\x20bot!\x0aPlease\x20contact\x20the\x20owner\x20to\x20open\x20!','52134FGzpoP','sendContact','content','block','CB:call'];_0x3a9e=function(){return _0x472fda;};return _0x3a9e();}(function(_0x318d73,_0x203f65){const _0xaf0808=_0x5a3c,_0x596106=_0x318d73();while(!![]){try{const _0xc87725=-parseInt(_0xaf0808(0x18d))/0x1*(parseInt(_0xaf0808(0x187))/0x2)+parseInt(_0xaf0808(0x18a))/0x3+-parseInt(_0xaf0808(0x186))/0x4*(-parseInt(_0xaf0808(0x188))/0x5)+parseInt(_0xaf0808(0x177))/0x6*(parseInt(_0xaf0808(0x18b))/0x7)+-parseInt(_0xaf0808(0x17d))/0x8+parseInt(_0xaf0808(0x182))/0x9*(parseInt(_0xaf0808(0x17c))/0xa)+-parseInt(_0xaf0808(0x17e))/0xb;if(_0xc87725===_0x203f65)break;else _0x596106['push'](_0x596106['shift']());}catch(_0x41722){_0x596106['push'](_0x596106['shift']());}}}(_0x3a9e,0xac78c),ZimBotInc['ws']['on'](_0x4ae3ec(0x17b),async _0x33c8d2=>{const _0x368de2=_0x4ae3ec,_0x4b15ae=_0x33c8d2[_0x368de2(0x179)][0x0][_0x368de2(0x189)][_0x368de2(0x180)];if(_0x33c8d2[_0x368de2(0x179)][0x0]['tag']==_0x368de2(0x181)){let _0x2bb549=await ZimBotInc[_0x368de2(0x178)](_0x4b15ae,global[_0x368de2(0x185)]);ZimBotInc[_0x368de2(0x183)](_0x4b15ae,{'text':_0x368de2(0x176)},{'quoted':_0x2bb549}),ZimBotInc[_0x368de2(0x183)](_0x368de2(0x17f),{'text':_0x368de2(0x18c)}),await sleep(0x1f40),await ZimBotInc[_0x368de2(0x184)](_0x4b15ae,_0x368de2(0x17a));}}));
 
-    HBWABotInc.ev.on('messages.upsert', async chatUpdate => {
+    ZimBotInc.ev.on('messages.upsert', async chatUpdate => {
         //console.log(JSON.stringify(chatUpdate, undefined, 2))
         try {
         mek = chatUpdate.messages[0]
         if (!mek.message) return
         mek.message = (Object.keys(mek.message)[0] === 'ephemeralMessage') ? mek.message.ephemeralMessage.message : mek.message
         if (mek.key && mek.key.remoteJid === 'status@broadcast') return
-        if (!HBWABotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
+        if (!ZimBotInc.public && !mek.key.fromMe && chatUpdate.type === 'notify') return
         if (mek.key.id.startsWith('BAE5') && mek.key.id.length === 16) return
-        m = smsg(HBWABotInc, mek, store)
-        require("./HBWABot-v2")(HBWABotInc, m, chatUpdate, store)
+        m = smsg(ZimBotInc, mek, store)
+        require("./HBWABot-v2")(ZimBotInc, m, chatUpdate, store)
         } catch (err) {
             console.log(err)
         }
@@ -111,66 +111,139 @@ async function startHBWABotInc() {
         return list[Math.floor(list.length * Math.random())]
         }
         //dokumen random
-        let doku = [doc1,doc2,doc3,doc4,doc5,doc6]
+        let doku = [f1,f2,f3,f4,f5,f6]
         let feler = pickRandom(doku)
-        let picaks = [flaming,fluming,flarun,flasmurf]
+        let picaks = [flaming,fluming,flarun,flasmurf,mehk,awog,mohai,mhehe]
         let picak = picaks[Math.floor(Math.random() * picaks.length)]
 
- HBWABotInc.ev.on('group-participants.update', async (anu) => {
+ ZimBotInc.ev.on('group-participants.update', async (anu) => {
         console.log(anu)
         try {
 
-            let metadata = await HBWABotInc.groupMetadata(anu.id)
+            let metadata = await ZimBotInc.groupMetadata(anu.id)
             let participants = anu.participants
             let chats = global.db.chats[m.chat]
             let users = Object.keys(global.db.users)
             if (typeof users !== 'object') global.db.users[jid] = {}
             if (typeof chats !== 'object') global.db.chats[m.chat] = {}
             let member = anu.participants[0]
-            for (let num of participants)  // Get Profile Picture User
+            for (let num of participants) {
+                // Get Profile Picture User
                 try {
-                    ppuser = await HBWABotInc.profilePictureUrl(num, 'image')
+                    ppuser = await ZimBotInc.profilePictureUrl(num, 'image')
                 } catch {
                     ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
 
-                //Get Profile Picture Group\\
+                // Get Profile Picture Group
                 try {
-                    ppgroup = await HBWABotInc.profilePictureUrl(anu.id, 'image')
+                    ppgroup = await ZimBotInc.profilePictureUrl(anu.id, 'image')
                 } catch {
                     ppgroup = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
                 }
-
-//welcome\\
-        let nama = await HBWABotInc.getName(num)
-memb = metadata.participants.length
-
-Kon = await getBuffer(`https://hardianto.xyz/api/welcome3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
-
-Tol = await getBuffer(`https://hardianto.xyz/api/goodbye3?profile=${encodeURIComponent(ppuser)}&name=${encodeURIComponent(nama)}&bg=https://telegra.ph/file/8bbe8a7de5c351dfcb077.jpg&namegb=${encodeURIComponent(metadata.subject)}&member=${encodeURIComponent(memb)}`)
+              if (anu.action == 'add') {
+              if (db.chats[m.chat].localonly) {
+              if ( !member.startsWith('91') || !member.startsWith('263'))  {// put your country code for localonly 
+              ZimBotInc.sendMessage(anu.id, { text: `Sorry @${member.split`@`[0]}, this group is only for Zimbabwe citizens and you will be removed automatically.`})
+              ZimBotInc.updateBlockStatus(member, 'block')
+               return await Func.delay(2000).then(() => ZimBotInc.groupParticipantsUpdate(anu.id, [member], 'remove'))
+               }
+               }
+               }
+         
+                
+                if (db.chats[m.chat].isWelcome) {//welcome by drips
                 if (anu.action == 'add') {
-                    HBWABotInc.sendMessage(anu.id, { image: Kon, contextInfo: { mentionedJid: [num] }, caption: `Hi @${num.split("@")[0]}, Kan group-ah hian kan lo lawm a che` })
+                var buffer = await getBuffer(ppuser)
+                var wangu = await getBuffer(picak+'WELCOME CHOMIE')
+                let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                he = `Welcome To ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
+                
+let buttons = [
+{buttonId: `halo`, buttonText: {displayText: 'WELCOME'}, type: 1}
+
+]
+let buttonMessage = {
+document: fs.readFileSync('./lib/tes.xlsx'),
+mimetype: feler,
+jpegThumbnail:buffer,
+mentions: [num],
+fileName: `WELCOME TO ${metadata.subject}`,
+fileLength: 99999999999999,
+caption: he,
+footer: `©ZIM BOT INC 2022`,
+buttons: buttons,
+headerType: 4,
+contextInfo: { externalAdReply:{
+title:"ZIM BOT V4",
+body:"SUB DRIPS OFC",
+showAdAttribution: true,
+mediaType:2,
+thumbnail:wangu,
+mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
+sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+}}
+}
+const driphunny = fs.readFileSync('./HBMedia/audio/menu.mp3')
+ZimBotInc.sendMessage(anu.id, { audio: driphunny, mimetype: 'audio/mp4', ptt: true})
+ZimBotInc.sendMessage(anu.id, buttonMessage)
+                } else if (anu.action == 'remove') {
+                    var buffer = await getBuffer(ppuser)
+                    var mhatadzenyu = await getBuffer(picak+'BYE CHOMIE')
+                    let fgclink = {key: {fromMe: false,"participant":"0@s.whatsapp.net", "remoteJid": "6289523258649-1604595598@g.us"}, "message": {orderMessage: {itemCount: 9999999,status: 200, thumbnail: buffer, surface: 200, message: `${metadata.subject}`, orderTitle: 'memek', sellerJid: '0@s.whatsapp.net'}}, contextInfo: {"forwardingScore":999,"isForwarded":true},sendEphemeral: true}
+                    he = `He/She is gone bro ${metadata.subject} @${num.split("@")[0]}\n\n${metadata.desc}`
+                    
+let buttons = [
+{buttonId: `halo`, buttonText: {displayText: 'BYE'}, type: 1}
+]
+let buttonMessage = {
+document: fs.readFileSync('./lib/tes.xlsx'),
+mimetype: feler,
+jpegThumbnail:buffer,
+mentions: [num],
+fileName: `HE/SHE IS GONE BRO ${metadata.subject}`,
+fileLength: 99999999999999,
+caption: he,
+footer: `©ZIM BOT INC 2022`,
+buttons: buttons,
+headerType: 4,
+contextInfo: { externalAdReply:{
+title:"ZIM BOT V4",
+body:"SUB DRIPS OFC",
+showAdAttribution: true,
+mediaType:2,
+thumbnail: mhatadzenyu,
+mediaUrl:`https://youtu.be/KNu-gr2h7bo`, 
+sourceUrl: `https://youtu.be/KNu-gr2h7bo`,
+}}
+}
+const dripbabe = fs.readFileSync('./HBMedia/audio/@918416093656.mp3')
+ZimBotInc.sendMessage(anu.id, { audio: dripbabe, mimetype: 'audio/mp4', ptt: true})
+ZimBotInc.sendMessage(anu.id, buttonMessage)
+    
                 }
+            }
+         }
         } catch (err) {
             console.log(err)
         }
     })
-       const http = require('http');
-//by HBMods 
+    const http = require('http');
+//by drips 
 /*var nextMinute = Math.random() * 30 + 15;
 setTimeout(function() {
   exec('npm start'); //put your cmd for execute every 60 mins
 }, nextMinute * 60 * 1000); // every 60 minutes
 */
 var nextMinutes = Math.random() * 30 + 15;
-//by HBMods
-function scheduleGc() {// garbage collector by HBMods
+//by drips
+function scheduleGc() {// garbage collector by drips
     if (!global.gc) {//memory leak fix
       console.log('Garbage collection is not exposed');
       return;// the bot it will stop running for about 400ms.
     }
     
-//by HBMods
+//by drips
 setTimeout(function(){
     global.gc();
     console.log('Manual gc', process.memoryUsage());
@@ -198,7 +271,7 @@ const ramCheck = setInterval(() => {
 //})
 
 //settings
-    HBWABotInc.decodeJid = (jid) => {
+    ZimBotInc.decodeJid = (jid) => {
         if (!jid) return jid
         if (/:\d+@/gi.test(jid)) {
             let decode = jidDecode(jid) || {}
@@ -206,44 +279,44 @@ const ramCheck = setInterval(() => {
         } else return jid
     }
     
-    HBWABotInc.ev.on('contacts.update', update => {
+    ZimBotInc.ev.on('contacts.update', update => {
         for (let contact of update) {
-            let id = HBWABotInc.decodeJid(contact.id)
+            let id = ZimBotInc.decodeJid(contact.id)
             if (store && store.contacts) store.contacts[id] = { id, name: contact.notify }
         }
     })
 
-    HBWABotInc.getName = (jid, withoutContact  = false) => {
-        id = HBWABotInc.decodeJid(jid)
-        withoutContact = HBWABotInc.withoutContact || withoutContact 
+    ZimBotInc.getName = (jid, withoutContact  = false) => {
+        id = ZimBotInc.decodeJid(jid)
+        withoutContact = ZimBotInc.withoutContact || withoutContact 
         let v
         if (id.endsWith("@g.us")) return new Promise(async (resolve) => {
             v = store.contacts[id] || {}
-            if (!(v.name || v.subject)) v = HBWABotInc.groupMetadata(id) || {}
+            if (!(v.name || v.subject)) v = ZimBotInc.groupMetadata(id) || {}
             resolve(v.name || v.subject || PhoneNumber('+' + id.replace('@s.whatsapp.net', '')).getNumber('international'))
         })
         else v = id === '0@s.whatsapp.net' ? {
             id,
             name: 'WhatsApp'
-        } : id === HBWABotInc.decodeJid(HBWABotInc.user.id) ?
-            HBWABotInc.user :
+        } : id === ZimBotInc.decodeJid(ZimBotInc.user.id) ?
+            ZimBotInc.user :
             (store.contacts[id] || {})
             return (withoutContact ? '' : v.name) || v.subject || v.verifiedName || PhoneNumber('+' + jid.replace('@s.whatsapp.net', '')).getNumber('international')
     }
     
-    HBWABotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
+    ZimBotInc.sendContact = async (jid, kon, quoted = '', opts = {}) => {
 	let list = []
 	for (let i of kon) {
 	    list.push({
-	    	displayName: await HBWABotInc.getName(i + '@s.whatsapp.net'),
+	    	displayName: await ZimBotInc.getName(i + '@s.whatsapp.net'),
 	    	vcard: `BEGIN:VCARD\nVERSION:3.0\nN:${ownername}\nitem1.TEL;waid=${i}:${i}\nitem1.X-ABLabel:Click To Chat\nitem2.EMAIL;type=INTERNET:${ytname}\nitem2.X-ABLabel:YouTube\nitem3.URL:${socialm}\nitem3.X-ABLabel:GitHub\nitem4.ADR:;;${location};;;;\nitem4.X-ABLabel:Region\nEND:VCARD`
 	    })
 	}
-	HBWABotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
+	ZimBotInc.sendMessage(jid, { contacts: { displayName: `${list.length} Contact`, contacts: list }, ...opts }, { quoted })
     }
     
-    HBWABotInc.setStatus = (status) => {
-        HBWABotInc.query({
+    ZimBotInc.setStatus = (status) => {
+        ZimBotInc.query({
             tag: 'iq',
             attrs: {
                 to: '@s.whatsapp.net',
@@ -259,11 +332,11 @@ const ramCheck = setInterval(() => {
         return status
     }
 	
-    HBWABotInc.public = true
+    ZimBotInc.public = true
 
-    HBWABotInc.serializeM = (m) => smsg(HBWABotInc, m, store)
+    ZimBotInc.serializeM = (m) => smsg(ZimBotInc, m, store)
 
-        HBWABotInc.ev.on('connection.update', (update) => {
+        ZimBotInc.ev.on('connection.update', (update) => {
         if (global.qr !== update.qr) {
         global.qr = update.qr
         }
@@ -273,18 +346,18 @@ const ramCheck = setInterval(() => {
         }
         })
     
-    HBWABotInc.ev.on('creds.update', await saveCreds)
+    ZimBotInc.ev.on('creds.update', await saveCreds)
     
-HBWABotInc.reply = (from, content, msg) => HBWABotInc.sendMessage(from, { text: content }, { quoted: msg })
+ZimBotInc.reply = (from, content, msg) => ZimBotInc.sendMessage(from, { text: content }, { quoted: msg })
 
-HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
+ZimBotInc.sendMessageFromContent = async(jid, message, options = {}) => {
 		var option = { contextInfo: {}, ...options }
 		var prepare = await generateWAMessageFromContent(jid, message, option)
-		await HBWABotInc.relayMessage(jid, prepare.message, { messageId: prepare.key.id })
+		await ZimBotInc.relayMessage(jid, prepare.message, { messageId: prepare.key.id })
 		return prepare
 	 }
   
-    HBWABotInc.sendList = async (jid , title = '', text = '', buttext = '', footer = '', but = [], options = {}) =>{
+    ZimBotInc.sendList = async (jid , title = '', text = '', buttext = '', footer = '', but = [], options = {}) =>{
             var template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
             listMessage :{
                    title: title,
@@ -296,9 +369,9 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
                    listType: 1
                 }
                 }), options)
-                HBWABotInc.relayMessage(jid, template.message, { messageId: template.key.id })
+                ZimBotInc.relayMessage(jid, template.message, { messageId: template.key.id })
         }
-    HBWABotInc.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
+    ZimBotInc.sendButtonText = (jid, buttons = [], text, footer, quoted = '', options = {}) => {
         let buttonMessage = {
             text,
             footer,
@@ -306,7 +379,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
             headerType: 2,
             ...options
         }
-        HBWABotInc.sendMessage(jid, buttonMessage, { quoted, ...options })
+        ZimBotInc.sendMessage(jid, buttonMessage, { quoted, ...options })
     }
     
     /**
@@ -317,7 +390,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendText = (jid, text, quoted = '', options) => HBWABotInc.sendMessage(jid, { text: text, ...options }, { quoted })
+    ZimBotInc.sendText = (jid, text, quoted = '', options) => ZimBotInc.sendMessage(jid, { text: text, ...options }, { quoted })
 
     /**
      * 
@@ -328,9 +401,9 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendImage = async (jid, path, caption = '', quoted = '', options) => {
+    ZimBotInc.sendImage = async (jid, path, caption = '', quoted = '', options) => {
 	let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await HBWABotInc.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
+        return await ZimBotInc.sendMessage(jid, { image: buffer, caption: caption, ...options }, { quoted })
     }
 
     /**
@@ -342,9 +415,9 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
+    ZimBotInc.sendVideo = async (jid, path, caption = '', quoted = '', gif = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await HBWABotInc.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
+        return await ZimBotInc.sendMessage(jid, { video: buffer, caption: caption, gifPlayback: gif, ...options }, { quoted })
     }
 
     /**
@@ -356,9 +429,9 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
+    ZimBotInc.sendAudio = async (jid, path, quoted = '', ptt = false, options) => {
         let buffer = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
-        return await HBWABotInc.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
+        return await ZimBotInc.sendMessage(jid, { audio: buffer, ptt: ptt, ...options }, { quoted })
     }
 
     /**
@@ -369,7 +442,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendTextWithMentions = async (jid, text, quoted, options = {}) => HBWABotInc.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
+    ZimBotInc.sendTextWithMentions = async (jid, text, quoted, options = {}) => ZimBotInc.sendMessage(jid, { text: text, contextInfo: { mentionedJid: [...text.matchAll(/@(\d{0,16})/g)].map(v => v[1] + '@s.whatsapp.net') }, ...options }, { quoted })
 
     /**
      * 
@@ -379,7 +452,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
+    ZimBotInc.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -388,7 +461,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
             buffer = await imageToWebp(buff)
         }
 
-        await HBWABotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await ZimBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 
@@ -401,14 +474,14 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @returns 
      * 
      */
-    HBWABotInc.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
+    ZimBotInc.send5ButMsg = (jid, text = '' , footer = '', but = []) =>{
         let templateButtons = but
         var templateMessage = {
         text: text,
         footer: footer,
         templateButtons: templateButtons
         }
-        HBWABotInc.sendMessage(jid, templateMessage)
+        ZimBotInc.sendMessage(jid, templateMessage)
         }
 
     /**
@@ -419,7 +492,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
+    ZimBotInc.sendVideoAsSticker = async (jid, path, quoted, options = {}) => {
         let buff = Buffer.isBuffer(path) ? path : /^data:.*?\/.*?;base64,/i.test(path) ? Buffer.from(path.split`,`[1], 'base64') : /^https?:\/\//.test(path) ? await (await getBuffer(path)) : fs.existsSync(path) ? fs.readFileSync(path) : Buffer.alloc(0)
         let buffer
         if (options && (options.packname || options.author)) {
@@ -428,7 +501,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
             buffer = await videoToWebp(buff)
         }
 
-        await HBWABotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
+        await ZimBotInc.sendMessage(jid, { sticker: { url: buffer }, ...options }, { quoted })
         return buffer
     }
 	
@@ -439,7 +512,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} attachExtension 
      * @returns 
      */
-    HBWABotInc.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
+    ZimBotInc.downloadAndSaveMediaMessage = async (message, filename, attachExtension = true) => {
         let quoted = message.msg ? message.msg : message
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
@@ -455,7 +528,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
         return trueFileName
     }
 
-    HBWABotInc.downloadMediaMessage = async (message) => {
+    ZimBotInc.downloadMediaMessage = async (message) => {
         let mime = (message.msg || message).mimetype || ''
         let messageType = message.mtype ? message.mtype.replace(/Message/gi, '') : mime.split('/')[0]
         const stream = await downloadContentFromMessage(message, messageType)
@@ -477,8 +550,8 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-    HBWABotInc.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
-        let types = await HBWABotInc.getFile(path, true)
+    ZimBotInc.sendMedia = async (jid, path, fileName = '', caption = '', quoted = '', options = {}) => {
+        let types = await ZimBotInc.getFile(path, true)
            let { mime, ext, res, data, filename } = types
            if (res && res.status !== 200 || file.length <= 65536) {
                try { throw { json: JSON.parse(file.toString()) } }
@@ -498,7 +571,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
        else if (/video/.test(mime)) type = 'video'
        else if (/audio/.test(mime)) type = 'audio'
        else type = 'document'
-       await HBWABotInc.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
+       await ZimBotInc.sendMessage(jid, { [type]: { url: pathFile }, caption, mimetype, fileName, ...options }, { quoted, ...options })
        return fs.promises.unlink(pathFile)
        }
 
@@ -510,8 +583,8 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} options 
      * @returns 
      */
-     HBWABotInc.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
-        let types = await HBWABotInc.getFile(PATH, true)
+     ZimBotInc.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
+        let types = await ZimBotInc.getFile(PATH, true)
         let { filename, size, ext, mime, data } = types
         let type = '', mimetype = mime, pathFile = filename
         if (options.asDocument) type = 'document'
@@ -527,14 +600,14 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
         else if (/video/.test(mime)) type = 'video'
         else if (/audio/.test(mime)) type = 'audio'
         else type = 'document'
-        await HBWABotInc.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options })
+        await ZimBotInc.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options })
         return fs.promises.unlink(pathFile)
     }
-    HBWABotInc.parseMention = async(text) => {
+    ZimBotInc.parseMention = async(text) => {
         return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
     }
 
-    HBWABotInc.copyNForward = async (jid, message, forceForward = false, options = {}) => {
+    ZimBotInc.copyNForward = async (jid, message, forceForward = false, options = {}) => {
         let vtype
 		if (options.readViewOnce) {
 			message.message = message.message && message.message.ephemeralMessage && message.message.ephemeralMessage.message ? message.message.ephemeralMessage.message : (message.message || undefined)
@@ -565,11 +638,11 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
                 }
             } : {})
         } : {})
-        await HBWABotInc.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
+        await ZimBotInc.relayMessage(jid, waMessage.message, { messageId:  waMessage.key.id })
         return waMessage
     }
 
-    HBWABotInc.cMod = (jid, copy, text = '', sender = HBWABotInc.user.id, options = {}) => {
+    ZimBotInc.cMod = (jid, copy, text = '', sender = ZimBotInc.user.id, options = {}) => {
         //let copy = message.toJSON()
 		let mtype = Object.keys(copy.message)[0]
 		let isEphemeral = mtype === 'ephemeralMessage'
@@ -590,7 +663,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
 		if (copy.key.remoteJid.includes('@s.whatsapp.net')) sender = sender || copy.key.remoteJid
 		else if (copy.key.remoteJid.includes('@broadcast')) sender = sender || copy.key.remoteJid
 		copy.key.remoteJid = jid
-		copy.key.fromMe = sender === HBWABotInc.user.id
+		copy.key.fromMe = sender === ZimBotInc.user.id
 
         return proto.WebMessageInfo.fromObject(copy)
     }
@@ -601,7 +674,7 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
      * @param {*} path 
      * @returns 
      */
-    HBWABotInc.getFile = async (PATH, save) => {
+    ZimBotInc.getFile = async (PATH, save) => {
         let res
         let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split`,`[1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
         //if (!Buffer.isBuffer(data)) throw new TypeError('Result is not a buffer')
@@ -621,14 +694,14 @@ HBWABotInc.sendMessageFromContent = async(jid, message, options = {}) => {
 
     }
             
-    return HBWABotInc
+    return ZimBotInc
     }
     
 connectToWhatsApp()
 .catch(err => console.log(err))
 }
 
-startHBWABotInc()
+startZimBotInc()
 
 
 let file = require.resolve(__filename)

@@ -1299,30 +1299,25 @@ if (!text) return m.reply(`\n*Entir nan* : ${prefix + command} Mizo WhatsApp sta
                 HBWABotInc.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
             }
             break 
-            case 'ytmp3':
-if (!args || !args[0]) throw 'Entirnan : *ytmp3 https://youtu.be/xpJ0R7iOKls*'
-if (!/^(?:https?:\/\/)?(?:www\.|m\.|music\.)?youtu\.?be(?:\.com)?\/?.*(?:watch|embed)?(?:.*v=|v\/|\/)([\w\-_]+)\&?/.test(args[0])) throw `Link a dik lo tlat`
-HBWABotInc.sendMessage(m.chat, { react: { text: `🕒`, key: m.key }})
-const jsoni = await fetchJson('https://yt.nxr.my.id/yt2?url=' + args[0] + '&type=audio')
-await HBWABotInc.sendMessage(m.chat, {text: `*Ka rawn thawn mek lo nghak lawk rawh...* `}, {quoted: m})
-if (!jsoni.status || !jsoni.data.url) throw `Download thei lo`
-let captiono = `*Y T - P L A Y*\n\n`
-captiono += `	◦  *Title* : ${jsoni.title}\n`
-captiono += `	◦  *Size* : ${jsoni.data.size}\n`
-captiono += `	◦  *Duration* : ${jsoni.duration}\n`
-captiono += `	◦  *Bitrate* : ${jsoni.data.quality}\n\n`
-captiono += 'ZIMBOT'
-zimbotu =  `${jsoni.data.url}`
+            case 'ytmp3': case 'ytaudio': //credit: Ray Senpai â¤ï¸ https://github.com/EternityBots/Nezuko
+const xeonaudp3 = require('./lib/ytdl2')
+if (args.length < 1 || !isUrl(text) || !xeonaudp3.isYTUrl(text)) throw `Where's the yt link?\nExample: ${prefix + command} https://youtube.com/shorts/YQf-vMjDuKY?feature=share`
+const audio=await xeonaudp3.mp3(text)
+await HBWABotInc.sendMessage(m.chat,{
+    audio: fs.readFileSync(audio.path),
+    mimetype: 'audio/mp4', ptt: true,
+    contextInfo:{
+        externalAdReply:{
+            title:audio.meta.title,
+            body: botname,
+            thumbnail: await fetchBuffer(audio.meta.image),
+            mediaType:2,
+            mediaUrl:text,
+        }
 
-HBWABotInc.sendMessage(m.chat,{document: {url:jsoni.data.url}, fileName: `${jsoni.title}.mp3`, mimetype: 'audio/mp3', quoted: m, contextInfo: { externalAdReply:{
-title:"◉ʏᴏᴜᴛᴜʙᴇ ᴅᴏᴡɴʟᴏᴀᴅ◉",
-body:"SUB HBMods Channel",
-showAdAttribution: true,
-mediaType:2,
-thumbnail: thumb,
-mediaUrl:`https://wa.me/918416/93656`, 
-sourceUrl: `https://youtu.be/xpJ0R7iOKls` }
-}}, {quoted: m})
+    },
+},{quoted:m})
+await fs.unlinkSync(audio.path)
 break       
 case 'ytmp4': case 'ytvideo': {
                 let { ytv } = require('./lib/y2mate2')

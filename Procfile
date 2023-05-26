@@ -1,1 +1,1 @@
-worker: node ndex.js
+worker: npm start

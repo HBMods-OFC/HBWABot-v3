@@ -1,10 +1,10 @@
 {
   "name": "HBWABot",
-  "version": "6.0.0",
+  "version": "3.0.0",
   "description": "Automated whatsapp md bot created using nodejs and baileys lib",
   "type": "commonjs",
   "scripts": {
-    "start": "node index.js"
+    "start": "node --max_old_space_size=8192 index.js"
   },
   "keywords": [
     "termux",
@@ -15,15 +15,17 @@
     "bot",
     "bot-md",
     "multi-device",
-    "xeon-bot-inc"
+    "hbwa-bot-inc"
   ],
   "author": "HBMods",
   "license": "AGPL-3",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.4.0",
+    "@adiwajshing/baileys": "npm:baileys-md@5.0.5",
     "@adiwajshing/keyed-db": "^0.2.4",
     "@bochilteam/scraper": "^2.0.0",
-    "anime-wallpaper": "^1.0.2",
+    "anime-wallpaper": "^1.0.2", 
+    "@vitalets/google-translate-api": "^9.0.0", 
+    "@ffmpeg-installer/ffmpeg" : "^1.1.0",
     "awesome-phonenumber": "^2.64.0",
     "axios": "^0.24.0",
     "chalk": "^4.1.2",
@@ -81,10 +83,10 @@
     "src": "src"
   },
   "devDependencies": {},
-  "repository": "git+https://github.com/DGXeon/CheemsBot-MD6.git",
+  "repository": "git+https://github.com/HBMods-OFC/HBWABot-v2.git",
   "bugs": {
-    "url": "https://github.com/DGXeon/CheemsBot-MD6/issues"
+    "url": "https://github.com/HBMods-OFC/HBWABot-v2/issues"
   },
-  "homepage": "https://github.com/DGXeon/CheemsBot-MD6/#readme",
+  "homepage": "https://github.com/HBMods-OFC/HBWABot-v2/#readme",
   "main": "index.js"
 }
